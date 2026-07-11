@@ -22,7 +22,7 @@ export default async function Home() {
             </span>
           </div>
 
-          <h1 className="text-headline-lg-mobile md:text-display-lg font-display-lg font-serif text-primary mb-6 max-w-4xl font-hindi tracking-wider">
+          <h1 className="text-5xl md:text-8xl text-primary mb-6 max-w-4xl font-hindi tracking-wider">
             Ramakatha 2026
           </h1>
 

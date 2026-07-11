@@ -56,12 +56,12 @@ export default function Navbar({ student }: NavbarProps) {
             href="/"
             className="flex items-center gap-3 text-title-lg font-title-lg font-bold text-primary hover:opacity-80 transition-opacity"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary shrink-0">
-              <path d="M4 12C4 7 8 3 12 3C13 3 14 4 14 5C14 6 13 7 12 7C9.2 7 7 9.2 7 12C7 14.8 9.2 17 12 17C13 17 14 18 14 19C14 20 13 21 12 21C8 21 4 17 4 12Z" fill="currentColor"/>
-              <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 3"/>
-              <path d="M6 12H19M19 12L15 8M19 12L15 16" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span className="font-hindi tracking-wider">Ramakatha 2026</span>
+            <img
+              src="/logo.png"
+              alt="Ramakatha Logo"
+              className="w-10 h-10 object-contain shrink-0"
+            />
+            <span className="font-hindi tracking-wider text-2xl">Ramakatha 2026</span>
           </Link>
 
           {/* Desktop Navigation */}
