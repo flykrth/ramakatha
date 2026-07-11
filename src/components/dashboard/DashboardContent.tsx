@@ -152,6 +152,10 @@ export default function DashboardContent({
                         <span className="material-symbols-outlined text-sm">explore</span>
                         Submission Mode: {reg.competitions.venue}
                       </p>
+                      <p className="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
+                        <span className="material-symbols-outlined text-sm">fingerprint</span>
+                        Registration ID: <span className="font-mono font-bold text-primary">{reg.registration_id}</span>
+                      </p>
                     </div>
                     <span className="bg-secondary-container/10 text-secondary-container text-label-sm font-label-sm px-3 py-1 rounded-full border border-secondary-container/20 font-bold uppercase shrink-0">
                       {reg.status}

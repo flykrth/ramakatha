@@ -390,19 +390,15 @@ export default function RegisterPage() {
           <div className="col-span-1 md:col-span-4 mb-4">
             <div className="text-title-lg font-title-lg text-primary font-bold">Ramakatha 2026</div>
           </div>
-          <div className="col-span-1 md:col-span-3 flex flex-wrap gap-4 md:gap-8">
-            <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
-              Contact Us
-            </Link>
-              <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
-                Student Login
-              </Link>
+          <div className="col-span-1 md:col-span-3 flex flex-wrap gap-6 md:justify-end text-body-md font-body-md text-on-surface-variant">
+            <a href="tel:+919778402692" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
+              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>phone</span>
+              +91 97784 02692
+            </a>
+            <a href="mailto:amritaleap@am.amrita.edu" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
+              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>mail</span>
+              amritaleap@am.amrita.edu
+            </a>
           </div>
           <div className="col-span-1 md:col-span-4 mt-4 text-body-md font-body-md text-on-surface-variant">
             © 2026 Ramakatha Institutional Council. All rights reserved.
