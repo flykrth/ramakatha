@@ -388,7 +388,7 @@ export default function RegisterPage() {
         {/* Footer */}
         <footer className="w-full mt-xl bg-surface-container-low border-t border-outline-variant grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto">
           <div className="col-span-1 md:col-span-4 mb-4">
-            <div className="text-title-lg font-title-lg text-primary font-bold">Ramakatha 2026</div>
+            <div className="text-title-lg font-title-lg text-primary font-bold font-hindi tracking-wider">Ramakatha 2026</div>
           </div>
           <div className="col-span-1 md:col-span-3 flex flex-wrap gap-6 md:justify-end text-body-md font-body-md text-on-surface-variant">
             <a href="tel:+919778402692" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
@@ -401,7 +401,7 @@ export default function RegisterPage() {
             </a>
           </div>
           <div className="col-span-1 md:col-span-4 mt-4 text-body-md font-body-md text-on-surface-variant">
-            © 2026 Ramakatha Institutional Council. All rights reserved.
+            © 2026 Amrita LEAP. All rights reserved.
           </div>
         </footer>
       </main>

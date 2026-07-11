@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import "tailwindcss";
+
+.font-hindi {
+  font-family: 'Yatra One', cursive;
+}
 
 @theme {
   --color-primary: #570000;
