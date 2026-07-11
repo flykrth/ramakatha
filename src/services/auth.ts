@@ -1,4 +1,5 @@
 import { createClient as createServerSupabase } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { StudentInput } from '@/lib/validation/student'
 
 const getPassword = (email: string) => {
@@ -25,8 +26,9 @@ export async function signUpStudent(input: StudentInput) {
   const user = authData.user
   if (!user) throw new Error('Failed to create auth account')
 
-  // 2. Create the student profile in the database
-  const { error: profileError } = await supabase.from('students').insert({
+  // 2. Create the student profile in the database using admin client (bypasses RLS for write during signup)
+  const adminSupabase = createAdminClient()
+  const { error: profileError } = await adminSupabase.from('students').insert({
     id: user.id,
     full_name: input.fullName,
     email: input.email,
