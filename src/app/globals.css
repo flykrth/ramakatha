@@ -52,20 +52,6 @@
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
   --radius-2xl: 1rem;
-
-  --font-serif: var(--font-playfair-display), serif;
-  --font-sans: var(--font-inter), sans-serif;
-
-  --spacing-margin-desktop: 80px;
-  --spacing-gutter: 24px;
-  --spacing-base: 8px;
-  --spacing-max-width: 1200px;
-  --spacing-md: 24px;
-  --spacing-xl: 64px;
-  --spacing-margin-mobile: 16px;
-  --spacing-sm: 12px;
-  --spacing-lg: 40px;
-  --spacing-xs: 4px;
 }
 
 /* Custom shadow utilities matching Stitch */
@@ -131,3 +117,142 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+/* ==========================================================================
+   Stitch Typography Classes
+   ========================================================================== */
+.text-display-lg {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+.text-headline-lg {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.text-headline-lg-mobile {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.text-headline-md {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.text-title-lg {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.text-body-lg {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.text-body-md {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.text-label-md {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.text-label-sm {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Stitch Spacing Scale Classes (Avoiding clashes with standard max-w sizes)
+   ========================================================================== */
+.px-margin-mobile {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.md\:px-margin-desktop {
+  @media (min-width: 768px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+.max-w-max-width {
+  max-width: 1200px;
+}
+.py-xl {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.py-lg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.mb-lg {
+  margin-bottom: 40px;
+}
+.mb-sm {
+  margin-bottom: 12px;
+}
+.mb-md {
+  margin-bottom: 24px;
+}
+.mb-xl {
+  margin-bottom: 64px;
+}
+.mt-xl {
+  margin-top: 64px;
+}
+.gap-gutter {
+  gap: 24px;
+}
+.p-md {
+  padding: 24px;
+}
+.p-lg {
+  padding: 40px;
+}
+.p-xl {
+  padding: 64px;
+}
+.gap-md {
+  gap: 24px;
+}
+.gap-lg {
+  gap: 40px;
+}
+.gap-sm {
+  gap: 12px;
+}
+.pt-lg {
+  padding-top: 40px;
+}
+.pb-xl {
+  padding-bottom: 64px;
+}
+.py-base {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.pl-13 {
+  padding-left: 52px;
+}
+.pt-28 {
+  padding-top: 112px;
+}
+
