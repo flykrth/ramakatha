@@ -2,6 +2,8 @@ import { getCurrentStudent } from '@/services/auth'
 import { getStudentRegistrations } from '@/services/registrations'
 import { getCompetitions } from '@/services/competitions'
 import DashboardContent from '@/components/dashboard/DashboardContent'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
 import { redirect } from 'next/navigation'
 
 export const revalidate = 0
@@ -21,10 +23,13 @@ export default async function DashboardPage() {
   ])
 
   return (
-    <DashboardContent
-      student={student as any}
-      initialRegistrations={registrations as any}
-      availableCount={eligibleCompetitions.length}
-    />
+    <>
+      <Navbar student={student} />
+      <DashboardContent
+        student={student as any}
+        initialRegistrations={registrations as any}
+      />
+      <Footer />
+    </>
   )
 }

@@ -1,5 +1,6 @@
 import { getCurrentStudent } from '@/services/auth'
 import { getCompetitions } from '@/services/competitions'
+import { getStudentRegistrations } from '@/services/registrations'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CompetitionsList from '@/components/competitions/CompetitionsList'
@@ -15,8 +16,13 @@ export default async function CompetitionsPage() {
     redirect('/register')
   }
 
-  // Fetch only competitions eligible for the student's class category
-  const competitions = await getCompetitions(student.class)
+  // Fetch eligible competitions and existing registrations
+  const [competitions, registrations] = await Promise.all([
+    getCompetitions(student.class),
+    getStudentRegistrations(student.id)
+  ])
+
+  const registeredIds = registrations.map((r: any) => r.competitions?.id).filter(Boolean)
 
   return (
     <>
@@ -34,7 +40,11 @@ export default async function CompetitionsPage() {
         </div>
 
         {/* Competitions Filter List */}
-        <CompetitionsList competitions={competitions as any} studentClass={student.class} />
+        <CompetitionsList 
+          competitions={competitions as any} 
+          studentClass={student.class} 
+          registeredIds={registeredIds}
+        />
       </main>
 
       <Footer />

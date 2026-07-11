@@ -44,7 +44,6 @@ export default function Navbar({ student }: NavbarProps) {
   const navLinks = [
     { name: 'About', href: '/' },
     { name: 'Competitions', href: '/competitions' },
-    { name: 'Guidelines', href: '/competitions/11111111-1111-1111-1111-000000000001' },
     { name: 'Dashboard', href: '/dashboard' },
   ]
 
@@ -87,12 +86,8 @@ export default function Navbar({ student }: NavbarProps) {
                 >
                   Logout
                 </button>
-                <Link href="/dashboard" className="w-10 h-10 rounded-full overflow-hidden border border-outline-variant hover:opacity-90 transition-opacity">
-                  <img
-                    alt="Student Profile Avatar"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncWRylk7eQT_DVRIN364g9cXQ82lSK7dBtKHFaJrsVk9R4zaRJ7kxz2pYdZImVQQH22hv4L7aiAOqTt7q5myu61BmTGb8X0hQhpmbEQEO79phJ4opsHh2Wel9gHQlMO75acJHkpicQdGhTeaE4qyK2flIIjTT8u7qJCSV3WXLnBihSU4Z9eT2LQPKipqKgWp_Z7OPfo4tTPVdVeiXDiXSs15uOgZlRLNRlhN7sOR0zxQnLIdgVoOPQw"
-                  />
+                <Link href="/dashboard" className="w-10 h-10 rounded-full overflow-hidden border border-outline-variant hover:opacity-90 transition-opacity flex items-center justify-center bg-primary text-white font-bold text-label-md uppercase">
+                  {student.full_name.charAt(0)}
                 </Link>
               </div>
             ) : (

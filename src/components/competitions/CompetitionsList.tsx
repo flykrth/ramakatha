@@ -20,9 +20,14 @@ interface Competition {
 interface CompetitionsListProps {
   competitions: Competition[]
   studentClass: string
+  registeredIds?: string[]
 }
 
-export default function CompetitionsList({ competitions, studentClass }: CompetitionsListProps) {
+export default function CompetitionsList({
+  competitions,
+  studentClass,
+  registeredIds = [],
+}: CompetitionsListProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All Events')
 
@@ -98,8 +103,9 @@ export default function CompetitionsList({ competitions, studentClass }: Competi
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCompetitions.map((comp) => {
-            const isFeatured = comp.status === 'open' && comp.category === 'Music' // Highlight hindustani vocal as large
-            
+            const isFeatured = comp.status === 'open' && comp.category === 'Music' // Highlight large cards if open music
+            const isAlreadyRegistered = registeredIds.includes(comp.id)
+
             // Check status tags
             let statusText = 'Open'
             let statusClass = 'bg-secondary-container/10 text-secondary-container border border-secondary-container/20'
@@ -181,7 +187,14 @@ export default function CompetitionsList({ competitions, studentClass }: Competi
                     </div>
 
                     <div className="flex gap-3 mt-auto">
-                      {comp.status === 'closed' ? (
+                      {isAlreadyRegistered ? (
+                        <button
+                          disabled
+                          className="w-full border border-secondary text-secondary px-4 py-2.5 rounded-xl font-label-md text-label-md bg-secondary/5 cursor-not-allowed text-center font-bold"
+                        >
+                          Already registered
+                        </button>
+                      ) : comp.status === 'closed' ? (
                         <button
                           disabled
                           className="w-full border border-outline text-on-surface-variant/50 px-4 py-2.5 rounded-xl font-label-md text-label-md bg-surface-container cursor-not-allowed text-center"

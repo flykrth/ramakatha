@@ -129,7 +129,7 @@ export default function GuidelinesForm({
   } else if (isAlreadyRegistered) {
     buttonLabel = 'Already Registered'
   } else if (isLimitReached) {
-    buttonLabel = 'Class Limit Reached'
+    buttonLabel = 'Event registration limit reached'
   }
 
   return (
@@ -287,9 +287,6 @@ export default function GuidelinesForm({
             >
               {buttonLabel}
             </button>
-            <p className="text-center text-label-sm font-label-sm text-on-surface-variant mt-3">
-              Requires login verification.
-            </p>
           </div>
         </div>
       </div>
