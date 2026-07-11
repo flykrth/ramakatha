@@ -8,16 +8,18 @@ const getPassword = (email: string) => {
 
 export async function signUpStudent(input: StudentInput) {
   const supabase = await createServerSupabase()
+  const adminSupabase = createAdminClient()
   const password = getPassword(input.email)
 
-  // 1. Sign up the user in Supabase Auth
-  const { data: authData, error: authError } = await supabase.auth.signUp({
+  // 1. Creat user administratively to bypass signup rate limits and auto-confirm email
+  const { data: authData, error: authError } = await adminSupabase.auth.admin.createUser({
     email: input.email,
     password,
+    email_confirm: true,
   })
 
   if (authError) {
-    if (authError.message.includes('already registered') || authError.status === 422) {
+    if (authError.message.includes('already exists') || authError.message.includes('already registered') || authError.status === 422) {
       throw new Error('Email is already registered')
     }
     throw new Error(authError.message)
@@ -26,8 +28,7 @@ export async function signUpStudent(input: StudentInput) {
   const user = authData.user
   if (!user) throw new Error('Failed to create auth account')
 
-  // 2. Create the student profile in the database using admin client (bypasses RLS for write during signup)
-  const adminSupabase = createAdminClient()
+  // 2. Create the student profile in the database
   const { error: profileError } = await adminSupabase.from('students').insert({
     id: user.id,
     full_name: input.fullName,
@@ -42,6 +43,16 @@ export async function signUpStudent(input: StudentInput) {
 
   if (profileError) {
     throw new Error(profileError.message)
+  }
+
+  // 3. Authenticate and establish session cookies on server
+  const { error: loginError } = await supabase.auth.signInWithPassword({
+    email: input.email,
+    password,
+  })
+
+  if (loginError) {
+    throw new Error('Profile created but failed to sign in automatically. Please log in.')
   }
 
   return user
