@@ -58,19 +58,31 @@ export async function signUpStudent(input: StudentInput) {
   return user
 }
 
-export async function signInStudent(email: string) {
+export async function signInStudent(email: string, phone: string) {
   const supabase = await createServerSupabase()
-  const password = getPassword(email)
+  const adminSupabase = createAdminClient()
 
+  // 1. Verify that a student with this email and phone exists
+  const { data: student, error: studentError } = await adminSupabase
+    .from('students')
+    .select('*')
+    .eq('email', email.toLowerCase().trim())
+    .eq('phone', phone.trim())
+    .maybeSingle()
+
+  if (studentError || !student) {
+    throw new Error('Invalid email or mobile number. Please check your credentials or register.')
+  }
+
+  const password = getPassword(student.email)
+
+  // 2. Sign in with password to establish session cookies
   const { data, error } = await supabase.auth.signInWithPassword({
-    email,
+    email: student.email,
     password,
   })
 
   if (error) {
-    if (error.message.includes('Invalid login credentials')) {
-      throw new Error('Email is not registered yet')
-    }
     throw new Error(error.message)
   }
 

@@ -15,6 +15,7 @@ export default function Navbar({ student }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [loginError, setLoginError] = useState('')
   const [isPending, startTransition] = useTransition()
 
@@ -23,10 +24,11 @@ export default function Navbar({ student }: NavbarProps) {
     setLoginError('')
 
     startTransition(async () => {
-      const res = await signInStudentAction(email)
+      const res = await signInStudentAction(email, phone)
       if (res.success) {
         setIsLoginModalOpen(false)
         setEmail('')
+        setPhone('')
         router.push('/dashboard')
       } else {
         setLoginError(res.error || 'Failed to sign in')
@@ -42,7 +44,7 @@ export default function Navbar({ student }: NavbarProps) {
   const navLinks = [
     { name: 'About', href: '/' },
     { name: 'Competitions', href: '/competitions' },
-    { name: 'Guidelines', href: '/competitions/11111111-1111-1111-1111-111111111111' },
+    { name: 'Guidelines', href: '/competitions/11111111-1111-1111-1111-000000000001' },
     { name: 'Dashboard', href: '/dashboard' },
   ]
 
@@ -98,7 +100,7 @@ export default function Navbar({ student }: NavbarProps) {
                 onClick={() => setIsLoginModalOpen(true)}
                 className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-2 px-6 rounded-[12px] hover:shadow-level-2 transition-all cursor-pointer"
               >
-                Institutional Login
+                Student Login
               </button>
             )}
           </div>
@@ -151,7 +153,7 @@ export default function Navbar({ student }: NavbarProps) {
                 }}
                 className="w-full bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 rounded-[12px] text-center"
               >
-                Institutional Login
+                Student Login
               </button>
             )}
           </div>
@@ -176,7 +178,7 @@ export default function Navbar({ student }: NavbarProps) {
               </button>
             </div>
             <p className="text-body-md font-body-md text-on-surface-variant mb-6">
-              Enter your registered student email to access your registrations dashboard.
+              Enter your registered email and mobile number to access your registrations dashboard.
             </p>
 
             <form onSubmit={handleLogin} className="space-y-4">
@@ -191,6 +193,22 @@ export default function Navbar({ student }: NavbarProps) {
                   placeholder="student@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none"
+                  disabled={isPending}
+                />
+              </div>
+
+              <div>
+                <label className="block text-label-sm font-semibold text-on-surface mb-2" htmlFor="loginPhone">
+                  Registered Mobile Number
+                </label>
+                <input
+                  id="loginPhone"
+                  type="tel"
+                  required
+                  placeholder="e.g. 9876543210"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none"
                   disabled={isPending}
                 />

@@ -400,9 +400,9 @@ export default function RegisterPage() {
             <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
               Contact Us
             </Link>
-            <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
-              Institutional Login
-            </Link>
+              <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors focus:underline">
+                Student Login
+              </Link>
           </div>
           <div className="col-span-1 md:col-span-4 mt-4 text-body-md font-body-md text-on-surface-variant">
             © 2026 Ramakatha Institutional Council. All rights reserved.

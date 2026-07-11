@@ -21,7 +21,7 @@ export default function Footer() {
             Contact Us
           </Link>
           <Link href="#" className="text-body-md font-body-md text-on-surface-variant hover:text-secondary transition-colors">
-            Institutional Login
+            Student Login
           </Link>
         </div>
       </div>

@@ -37,7 +37,6 @@ export default function GuidelinesForm({
   const router = useRouter()
   const [checkRules, setCheckRules] = useState(false)
   const [checkEligibility, setCheckEligibility] = useState(false)
-  const [checkFinal, setCheckFinal] = useState(false)
   const [error, setError] = useState('')
   const [isPending, startTransition] = useTransition()
   const [showSuccess, setShowSuccess] = useState(false)
@@ -57,7 +56,7 @@ export default function GuidelinesForm({
   const isRegistrationBlocked = isAlreadyRegistered || isLimitReached
 
   const handleRegister = async () => {
-    if (!checkFinal || isRegistrationBlocked) return
+    if (!checkRules || !checkEligibility || isRegistrationBlocked) return
     setError('')
 
     // Generate random mock registration ID for optimistic display
@@ -80,7 +79,6 @@ export default function GuidelinesForm({
   const resetForm = () => {
     setCheckRules(false)
     setCheckEligibility(false)
-    setCheckFinal(false)
     setShowSuccess(false)
     router.push('/competitions')
   }
@@ -158,7 +156,7 @@ export default function GuidelinesForm({
               <span className="text-body-md font-body-md text-on-surface">July 30, 2026</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Venue</span>
+              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Mode of Submission</span>
               <span className="text-body-md font-body-md text-on-surface">{competition.venue}</span>
             </div>
             <div className="flex flex-col gap-1">
@@ -280,37 +278,17 @@ export default function GuidelinesForm({
                 I confirm I meet the age and eligibility requirements for this division.
               </span>
             </label>
-
-            <label className="flex items-start gap-3 cursor-pointer group">
-              <div className="relative flex items-start pt-1">
-                <input
-                  type="checkbox"
-                  checked={checkFinal}
-                  onChange={(e) => setCheckFinal(e.target.checked)}
-                  className="peer sr-only"
-                  disabled={isPending || isRegistrationBlocked}
-                />
-                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
-                  <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
-                    check
-                  </span>
-                </div>
-              </div>
-              <span className="text-body-md font-body-md text-on-surface select-none font-semibold text-primary">
-                I have read and understood all the guidelines.
-              </span>
-            </label>
           </div>
           <div className="pt-md mt-auto">
             <button
               onClick={handleRegister}
-              disabled={!checkFinal || isPending || isRegistrationBlocked}
+              disabled={!checkRules || !checkEligibility || isPending || isRegistrationBlocked}
               className="w-full bg-primary-container text-on-primary py-3 px-4 rounded-xl text-label-md font-label-md font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-on-primary-fixed-variant flex items-center justify-center gap-2 cursor-pointer"
             >
               {buttonLabel}
             </button>
             <p className="text-center text-label-sm font-label-sm text-on-surface-variant mt-3">
-              Requires institutional login verification.
+              Requires login verification.
             </p>
           </div>
         </div>

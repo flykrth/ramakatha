@@ -23,13 +23,16 @@ export async function registerStudentAction(data: StudentInput) {
   return { success: true }
 }
 
-export async function signInStudentAction(email: string) {
+export async function signInStudentAction(email: string, phone: string) {
   if (!email || !email.includes('@')) {
     return { success: false, error: 'Please enter a valid email address' }
   }
+  if (!phone || phone.trim().length < 10) {
+    return { success: false, error: 'Please enter a valid mobile number' }
+  }
 
   try {
-    await signInStudent(email)
+    await signInStudent(email, phone)
   } catch (err: any) {
     return { success: false, error: err.message || 'Failed to login' }
   }
