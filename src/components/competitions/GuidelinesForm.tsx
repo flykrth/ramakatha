@@ -16,6 +16,7 @@ interface GuidelinesFormProps {
     duration: string
     age_group: string
     status: 'open' | 'waitlist' | 'closed'
+    is_school_wise: boolean
     competition_guidelines: Array<{
       general_rules: string[]
       scoring_criteria: Array<{
@@ -24,9 +25,15 @@ interface GuidelinesFormProps {
       }>
     }> | null
   }
+  isAlreadyRegistered: boolean
+  hasRegisteredClassEvent: boolean
 }
 
-export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
+export default function GuidelinesForm({
+  competition,
+  isAlreadyRegistered,
+  hasRegisteredClassEvent,
+}: GuidelinesFormProps) {
   const router = useRouter()
   const [checkRules, setCheckRules] = useState(false)
   const [checkEligibility, setCheckEligibility] = useState(false)
@@ -51,13 +58,18 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
 
   const totalScore = scoringCriteria.reduce((sum, item) => sum + item.max_points, 0)
 
+  // Registration block logic: Block if already registered OR if class-category limit reached
+  const isClassCategoryEvent = !competition.is_school_wise
+  const isLimitReached = isClassCategoryEvent && hasRegisteredClassEvent
+  const isRegistrationBlocked = isAlreadyRegistered || isLimitReached
+
   const handleRegister = async () => {
-    if (!checkFinal) return
+    if (!checkFinal || isRegistrationBlocked) return
     setError('')
 
     // Generate random mock registration ID for optimistic display
-    // e.g. RK-2026-CV-8492
-    const catCode = competition.category.substring(0, 2).toUpperCase()
+    // e.g. RK-2026-ST-8492
+    const catCode = competition.title.substring(0, 2).toUpperCase()
     const randNum = Math.floor(1000 + Math.random() * 9000)
     const mockRegId = `RK-2026-${catCode}-${randNum}`
 
@@ -131,6 +143,16 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
     )
   }
 
+  // Set the button label dynamically
+  let buttonLabel = 'Register for Event'
+  if (isPending) {
+    buttonLabel = 'Processing...'
+  } else if (isAlreadyRegistered) {
+    buttonLabel = 'Already Registered'
+  } else if (isLimitReached) {
+    buttonLabel = 'Class Limit Reached'
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter relative">
       {/* Left Column: Guidelines Content */}
@@ -168,7 +190,9 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
                 Category
               </span>
-              <span className="text-body-md font-body-md text-on-surface">{competition.category}</span>
+              <span className="text-body-md font-body-md text-on-surface">
+                {competition.category} {competition.is_school_wise ? '(School-wise)' : '(Class Category)'}
+              </span>
             </div>
           </div>
         </section>
@@ -177,7 +201,7 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
         <section className="bg-surface rounded-xl p-md border border-outline-variant shadow-sm">
           <h2 className="text-headline-md font-headline-md text-on-surface mb-md flex items-center gap-2 font-serif font-bold">
             <span className="material-symbols-outlined text-primary">rule</span>
-            General Rules
+            General Rules & Guidelines
           </h2>
           <ul className="space-y-4">
             {generalRules.map((rule, idx) => (
@@ -232,16 +256,49 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
           <div className="border-b border-outline-variant pb-md">
             <h3 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">Registration Status</h3>
             <div className="flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
-              </span>
-              <span className="text-label-md font-label-md text-secondary-container font-semibold">
-                Registrations Open
-              </span>
+              {isRegistrationBlocked ? (
+                <>
+                  <span className="relative flex h-3 w-3">
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+                  </span>
+                  <span className="text-label-md font-label-md text-error font-semibold">
+                    {isAlreadyRegistered ? 'Already Registered' : 'Registration Blocked'}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                  </span>
+                  <span className="text-label-md font-label-md text-secondary-container font-semibold">
+                    Registrations Open
+                  </span>
+                </>
+              )}
             </div>
             <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: Oct 10, 2026</p>
           </div>
+
+          {/* Validation Feedback Warning Banners */}
+          {isAlreadyRegistered && (
+            <div className="p-4 bg-secondary-container/10 border border-secondary-container/30 text-secondary-fixed-dim rounded-lg text-body-md flex gap-2">
+              <span className="material-symbols-outlined text-secondary" style={{ fontSize: '20px' }}>info</span>
+              <p className="text-label-sm text-on-surface-variant">
+                You are already registered for this competition. You can manage your participation on your <Link href="/dashboard" className="text-primary underline font-semibold">Dashboard</Link>.
+              </p>
+            </div>
+          )}
+
+          {isLimitReached && (
+            <div className="p-4 bg-error-container/20 border border-error-container text-error rounded-lg text-body-md flex gap-2">
+              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>warning</span>
+              <p className="text-label-sm text-on-surface-variant">
+                You can only register for a single event in your class category. To choose this event, please cancel your other class registration on the <Link href="/dashboard" className="text-primary underline font-semibold">Dashboard</Link> first.
+              </p>
+            </div>
+          )}
+
           <div className="flex flex-col gap-3">
             <h4 className="text-label-md font-label-md text-on-surface font-semibold">Pre-Registration Checklist:</h4>
             
@@ -252,7 +309,7 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
                   checked={checkRules}
                   onChange={(e) => setCheckRules(e.target.checked)}
                   className="peer sr-only"
-                  disabled={isPending}
+                  disabled={isPending || isRegistrationBlocked}
                 />
                 <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
                   <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
@@ -272,7 +329,7 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
                   checked={checkEligibility}
                   onChange={(e) => setCheckEligibility(e.target.checked)}
                   className="peer sr-only"
-                  disabled={isPending}
+                  disabled={isPending || isRegistrationBlocked}
                 />
                 <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
                   <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
@@ -292,7 +349,7 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
                   checked={checkFinal}
                   onChange={(e) => setCheckFinal(e.target.checked)}
                   className="peer sr-only"
-                  disabled={isPending}
+                  disabled={isPending || isRegistrationBlocked}
                 />
                 <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
                   <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
@@ -308,19 +365,10 @@ export default function GuidelinesForm({ competition }: GuidelinesFormProps) {
           <div className="pt-md mt-auto">
             <button
               onClick={handleRegister}
-              disabled={!checkFinal || isPending}
+              disabled={!checkFinal || isPending || isRegistrationBlocked}
               className="w-full bg-primary-container text-on-primary py-3 px-4 rounded-xl text-label-md font-label-md font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-on-primary-fixed-variant flex items-center justify-center gap-2 cursor-pointer"
             >
-              {isPending ? (
-                <>
-                  <span className="material-symbols-outlined animate-spin" style={{ fontSize: '18px' }}>
-                    progress_activity
-                  </span>
-                  Processing...
-                </>
-              ) : (
-                'Register for Event'
-              )}
+              {buttonLabel}
             </button>
             <p className="text-center text-label-sm font-label-sm text-on-surface-variant mt-3">
               Requires institutional login verification.

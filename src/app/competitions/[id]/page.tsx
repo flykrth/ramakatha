@@ -1,5 +1,6 @@
 import { getCurrentStudent } from '@/services/auth'
 import { getCompetitionById } from '@/services/competitions'
+import { getStudentRegistrations } from '@/services/registrations'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import GuidelinesForm from '@/components/competitions/GuidelinesForm'
@@ -29,12 +30,17 @@ export default async function CompetitionDetailsPage({ params }: PageProps) {
     redirect('/competitions')
   }
 
-  // Security check: Verify student class is in the eligible_classes array
-  const isEligible = competition.eligible_classes.includes(student.class)
+  // Security check: Verify student class is eligible for this division or if it's school-wise
+  const isEligible = competition.is_school_wise || competition.eligible_classes.includes(student.class)
   if (!isEligible) {
     // If not eligible, strictly redirect them to the browse page
     redirect('/competitions')
   }
+
+  // Fetch existing registrations to check limits
+  const registrations = await getStudentRegistrations(student.id)
+  const isAlreadyRegistered = registrations.some((r: any) => r.competitions && r.competitions.id === competition.id)
+  const hasRegisteredClassEvent = registrations.some((r: any) => r.competitions && !r.competitions.is_school_wise)
 
   return (
     <>
@@ -58,7 +64,11 @@ export default async function CompetitionDetailsPage({ params }: PageProps) {
         </div>
 
         {/* Guidelines and Accept Checklist Form */}
-        <GuidelinesForm competition={competition as any} />
+        <GuidelinesForm 
+          competition={competition as any} 
+          isAlreadyRegistered={isAlreadyRegistered}
+          hasRegisteredClassEvent={hasRegisteredClassEvent}
+        />
       </main>
 
       <Footer />

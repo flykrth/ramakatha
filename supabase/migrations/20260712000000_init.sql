@@ -28,6 +28,7 @@ create table public.competitions (
   age_group text not null,
   eligible_classes text[] not null, -- e.g. {'9', '10', '11', '12'}
   max_team_size integer default 1 not null,
+  is_school_wise boolean default false not null,
   status text default 'open' not null check (status in ('open', 'waitlist', 'closed')),
   created_at timestamptz default now() not null,
   updated_at timestamptz default now() not null

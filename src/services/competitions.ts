@@ -3,16 +3,16 @@ import { createClient } from '@/lib/supabase/server'
 export async function getCompetitions(studentClass?: string) {
   const supabase = await createClient()
 
-  let query = supabase.from('competitions').select('*')
-
-  if (studentClass) {
-    query = query.contains('eligible_classes', [studentClass])
-  }
-
-  const { data, error } = await query
+  const { data, error } = await supabase.from('competitions').select('*')
 
   if (error) {
     throw new Error('Failed to fetch competitions')
+  }
+
+  if (studentClass) {
+    return (data || []).filter(
+      (comp: any) => comp.is_school_wise || (comp.eligible_classes && comp.eligible_classes.includes(studentClass))
+    )
   }
 
   return data || []
