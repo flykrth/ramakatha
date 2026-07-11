@@ -49,17 +49,11 @@ export default async function CompetitionDetailsPage({ params }: PageProps) {
       <main className="flex-grow w-full max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl pt-28">
         {/* Navigation / Header */}
         <div className="mb-lg">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-primary text-label-sm font-label-sm mb-4">
-            <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
-              gavel
-            </span>
-            Official Competition Rules
-          </div>
           <h1 className="text-headline-lg-mobile md:text-display-lg font-serif text-primary mb-2">
             {competition.title}
           </h1>
           <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
-            Detailed guidelines, scoring criteria, and registration for the upcoming Ramakatha {competition.category} competition. Please review all requirements carefully before registering.
+            Detailed guidelines and registration for the upcoming Ramakatha {competition.title} competition. Please review all requirements carefully before registering.
           </p>
         </div>
 

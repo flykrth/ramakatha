@@ -50,13 +50,6 @@ export default function GuidelinesForm({
     'Late submissions or late entries will not be accepted.',
     'Standard behavior codes must be maintained throughout the event.'
   ]
-  const scoringCriteria = guidelineData?.scoring_criteria || [
-    { criteria: 'Technical Skill & Execution', max_points: 50 },
-    { criteria: 'Theme Representation & Adherence', max_points: 30 },
-    { criteria: 'Overall Presentation', max_points: 20 }
-  ]
-
-  const totalScore = scoringCriteria.reduce((sum, item) => sum + item.max_points, 0)
 
   // Registration block logic: Block if already registered OR if class-category limit reached
   const isClassCategoryEvent = !competition.is_school_wise
@@ -90,18 +83,6 @@ export default function GuidelinesForm({
     setCheckFinal(false)
     setShowSuccess(false)
     router.push('/competitions')
-  }
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true,
-    }) + ' IST'
   }
 
   if (showSuccess) {
@@ -172,9 +153,9 @@ export default function GuidelinesForm({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
             <div className="flex flex-col gap-1">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
-                Date & Time
+                Deadline
               </span>
-              <span className="text-body-md font-body-md text-on-surface">{formatDate(competition.event_date)}</span>
+              <span className="text-body-md font-body-md text-on-surface">July 30, 2026</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Venue</span>
@@ -185,14 +166,6 @@ export default function GuidelinesForm({
                 Duration
               </span>
               <span className="text-body-md font-body-md text-on-surface">{competition.duration}</span>
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
-                Category
-              </span>
-              <span className="text-body-md font-body-md text-on-surface">
-                {competition.category} {competition.is_school_wise ? '(School-wise)' : '(Class Category)'}
-              </span>
             </div>
           </div>
         </section>
@@ -213,40 +186,6 @@ export default function GuidelinesForm({
               </li>
             ))}
           </ul>
-        </section>
-
-        {/* Section 3: Scoring Criteria */}
-        <section className="bg-surface rounded-xl p-md border border-outline-variant shadow-sm">
-          <h2 className="text-headline-md font-headline-md text-on-surface mb-md flex items-center gap-2 font-serif font-bold">
-            <span className="material-symbols-outlined text-primary">workspace_premium</span>
-            Scoring Criteria
-          </h2>
-          <div className="overflow-x-auto border border-outline-variant rounded-lg">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-surface-container-low border-b border-outline-variant">
-                  <th className="p-3 text-label-md font-label-md text-on-surface-variant font-semibold">Criteria</th>
-                  <th className="p-3 text-label-md font-label-md text-on-surface-variant font-semibold text-right">
-                    Max Points
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {scoringCriteria.map((item, idx) => (
-                  <tr key={idx} className="border-b border-outline-variant last:border-b-0">
-                    <td className="p-3 text-body-md font-body-md text-on-surface">{item.criteria}</td>
-                    <td className="p-3 text-body-md font-body-md text-on-surface text-right font-semibold">
-                      {item.max_points}
-                    </td>
-                  </tr>
-                ))}
-                <tr className="bg-surface-container-low">
-                  <td className="p-3 text-title-lg font-title-lg text-primary font-bold">Total Score</td>
-                  <td className="p-3 text-title-lg font-title-lg text-primary text-right font-bold">{totalScore}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </section>
       </div>
 
@@ -277,7 +216,7 @@ export default function GuidelinesForm({
                 </>
               )}
             </div>
-            <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: Oct 10, 2026</p>
+            <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: July 30, 2026</p>
           </div>
 
           {/* Validation Feedback Warning Banners */}
@@ -318,7 +257,7 @@ export default function GuidelinesForm({
                 </div>
               </div>
               <span className="text-body-md font-body-md text-on-surface select-none">
-                I have read and understood the rules and scoring criteria.
+                I have read and understood the rules and guidelines.
               </span>
             </label>
 
