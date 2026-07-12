@@ -1,6 +1,7 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { getCurrentStudent } from '@/services/auth'
+import InteractiveCanvas from '@/components/home/InteractiveCanvas'
 import Link from 'next/link'
 
 export const revalidate = 0
@@ -13,6 +14,7 @@ export default async function Home() {
       <Navbar student={student} />
 
       <main className="relative pt-24 pb-xl flex-grow overflow-hidden bg-background">
+        <InteractiveCanvas />
         {/* Animated Background Graphics */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           {/* Glowing mesh blobs */}
