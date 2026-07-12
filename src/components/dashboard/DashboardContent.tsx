@@ -222,19 +222,10 @@ export default function DashboardContent({
               </button>
               <button
                 disabled={isPending}
-                className="px-4 py-2 bg-error text-on-error text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2 cursor-pointer"
+                className="px-4 py-2 bg-error text-on-error text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 cursor-pointer"
                 onClick={handleRemoveConfirm}
               >
-                {isPending ? (
-                  <>
-                    <span className="material-symbols-outlined animate-spin" style={{ fontSize: '18px' }}>
-                      progress_activity
-                    </span>
-                    Removing...
-                  </>
-                ) : (
-                  'Yes, remove'
-                )}
+                {isPending ? 'Removing...' : 'Yes, remove'}
               </button>
             </div>
           </div>

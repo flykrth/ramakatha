@@ -229,19 +229,10 @@ export default function Navbar({ student }: NavbarProps) {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-primary text-white text-label-md font-label-md font-bold rounded-lg hover:bg-primary-container transition-all flex items-center gap-2 cursor-pointer"
+                  className="px-6 py-2 bg-primary text-white text-label-md font-label-md font-bold rounded-lg hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer"
                   disabled={isPending}
                 >
-                  {isPending ? (
-                    <>
-                      <span className="material-symbols-outlined animate-spin" style={{ fontSize: '18px' }}>
-                        progress_activity
-                      </span>
-                      Verifying...
-                    </>
-                  ) : (
-                    'Log in'
-                  )}
+                  {isPending ? 'Verifying...' : 'Log in'}
                 </button>
               </div>
             </form>

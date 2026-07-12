@@ -356,19 +356,10 @@ export default function RegisterPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-8 py-3 bg-primary text-white text-label-md font-label-md font-bold rounded-lg hover:opacity-90 transition-all flex items-center gap-2 cursor-pointer"
+                  className="px-8 py-3 bg-primary text-white text-label-md font-label-md font-bold rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 cursor-pointer"
                   disabled={isPending}
                 >
-                  {isPending ? (
-                    <>
-                      <span className="material-symbols-outlined animate-spin" style={{ fontSize: '18px' }}>
-                        progress_activity
-                      </span>
-                      Saving...
-                    </>
-                  ) : (
-                    'Save & continue'
-                  )}
+                  {isPending ? 'Saving...' : 'Save & continue'}
                 </button>
               </div>
             </form>
