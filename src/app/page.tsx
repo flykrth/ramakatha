@@ -18,7 +18,7 @@ export default async function Home() {
           <div className="inline-flex items-center gap-2 bg-secondary-container/10 px-4 py-1.5 rounded-full mb-6">
             <span className="text-secondary-container material-symbols-outlined text-sm">auto_awesome</span>
             <span className="text-secondary-container text-label-sm font-label-sm uppercase tracking-wider">
-              Registration Open
+              Registration open
             </span>
           </div>
 
@@ -35,7 +35,7 @@ export default async function Home() {
               href={student ? '/dashboard' : '/register'}
               className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 px-8 rounded-[12px] hover:shadow-level-2 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              {student ? 'Go to Dashboard' : 'Register Now'}
+              {student ? 'Go to dashboard' : 'Register now'}
               <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>

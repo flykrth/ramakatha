@@ -90,7 +90,7 @@ export default function GuidelinesForm({
           <div className="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center mb-6 text-primary">
             <span className="material-symbols-outlined text-4xl">how_to_reg</span>
           </div>
-          <h2 className="text-headline-lg font-headline-lg text-primary mb-2 font-serif">Registration Successful</h2>
+          <h2 className="text-headline-lg font-headline-lg text-primary mb-2 font-serif">Registration successful</h2>
           <p className="text-body-lg font-body-lg text-on-surface-variant mb-8">
             You have successfully registered for <strong>{competition.title}</strong>. A confirmation email has been sent to your institutional address.
           </p>
@@ -105,13 +105,13 @@ export default function GuidelinesForm({
               onClick={resetForm}
               className="flex-1 py-3 px-4 rounded-xl border border-primary text-primary text-label-md font-label-md font-semibold hover:bg-surface-container-low transition-colors cursor-pointer"
             >
-              Register Another Event
+              Register another event
             </button>
             <Link
               href="/dashboard"
               className="flex-1 py-3 px-4 rounded-xl bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-on-primary-fixed-variant transition-colors flex items-center justify-center gap-2"
             >
-              Back to Dashboard
+              Back to dashboard
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
                 arrow_forward
               </span>
@@ -123,11 +123,11 @@ export default function GuidelinesForm({
   }
 
   // Set the button label dynamically
-  let buttonLabel = 'Register for Event'
+  let buttonLabel = 'Register for event'
   if (isPending) {
     buttonLabel = 'Processing...'
   } else if (isAlreadyRegistered) {
-    buttonLabel = 'Already Registered'
+    buttonLabel = 'Already registered'
   } else if (isLimitReached) {
     buttonLabel = 'Event registration limit reached'
   }
@@ -146,7 +146,7 @@ export default function GuidelinesForm({
         <section className="bg-surface rounded-xl p-md border border-outline-variant shadow-sm">
           <h2 className="text-headline-md font-headline-md text-on-surface mb-md flex items-center gap-2 font-serif font-bold">
             <span className="material-symbols-outlined text-primary">info</span>
-            Event Information
+            Event information
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
             <div className="flex flex-col gap-1">
@@ -156,7 +156,7 @@ export default function GuidelinesForm({
               <span className="text-body-md font-body-md text-on-surface">July 30, 2026</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Mode of Submission</span>
+              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Mode of submission</span>
               <span className="text-body-md font-body-md text-on-surface">{competition.venue}</span>
             </div>
             <div className="flex flex-col gap-1">
@@ -172,7 +172,7 @@ export default function GuidelinesForm({
         <section className="bg-surface rounded-xl p-md border border-outline-variant shadow-sm">
           <h2 className="text-headline-md font-headline-md text-on-surface mb-md flex items-center gap-2 font-serif font-bold">
             <span className="material-symbols-outlined text-primary">rule</span>
-            General Rules & Guidelines
+            General rules & guidelines
           </h2>
           <ul className="space-y-4">
             {generalRules.map((rule, idx) => (
@@ -191,7 +191,7 @@ export default function GuidelinesForm({
       <div className="md:col-span-5 lg:col-span-4 relative">
         <div className="sticky top-28 bg-surface rounded-xl border border-outline-variant shadow-sm p-md flex flex-col gap-md">
           <div className="border-b border-outline-variant pb-md">
-            <h3 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">Registration Status</h3>
+            <h3 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">Registration status</h3>
             <div className="flex items-center gap-2">
               {isRegistrationBlocked ? (
                 <>
@@ -199,7 +199,7 @@ export default function GuidelinesForm({
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
                   </span>
                   <span className="text-label-md font-label-md text-error font-semibold">
-                    {isAlreadyRegistered ? 'Already Registered' : 'Registration Blocked'}
+                    {isAlreadyRegistered ? 'Already registered' : 'Registration blocked'}
                   </span>
                 </>
               ) : (
@@ -209,7 +209,7 @@ export default function GuidelinesForm({
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
                   </span>
                   <span className="text-label-md font-label-md text-secondary-container font-semibold">
-                    Registrations Open
+                    Registrations open
                   </span>
                 </>
               )}
@@ -237,7 +237,7 @@ export default function GuidelinesForm({
           )}
 
           <div className="flex flex-col gap-3">
-            <h4 className="text-label-md font-label-md text-on-surface font-semibold">Pre-Registration Checklist:</h4>
+            <h4 className="text-label-md font-label-md text-on-surface font-semibold">Pre-registration checklist:</h4>
             
             <label className="flex items-start gap-3 cursor-pointer group">
               <div className="relative flex items-start pt-1">

@@ -65,7 +65,7 @@ export default function RegisterPage() {
         <div className="max-w-[800px] mx-auto px-margin-mobile md:px-lg">
           {/* Page Header */}
           <div className="mb-lg text-center">
-            <h1 className="text-headline-lg font-headline-lg text-on-surface mb-2 font-serif font-bold">Student Registration</h1>
+            <h1 className="text-headline-lg font-headline-lg text-on-surface mb-2 font-serif font-bold">Student registration</h1>
             <p className="text-body-md font-body-md text-on-surface-variant">
               Please provide your personal and academic details.
             </p>
@@ -82,14 +82,14 @@ export default function RegisterPage() {
                 <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-label-md font-label-md font-bold shadow-level-1 ring-4 ring-background">
                   1
                 </div>
-                <span className="text-label-sm font-label-sm text-primary font-bold">Personal Info</span>
+                <span className="text-label-sm font-label-sm text-primary font-bold">Personal info</span>
               </div>
               {/* Step 2 */}
               <div className="flex flex-col items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-surface border-2 border-outline-variant text-on-surface-variant flex items-center justify-center text-label-md font-label-md ring-4 ring-background">
                   2
                 </div>
-                <span className="text-label-sm font-label-sm text-on-surface-variant">Event Selection</span>
+                <span className="text-label-sm font-label-sm text-on-surface-variant">Event selection</span>
               </div>
               {/* Step 3 */}
               <div className="flex flex-col items-center gap-2">
@@ -113,13 +113,13 @@ export default function RegisterPage() {
               {/* Section: Personal Details */}
               <div>
                 <h2 className="text-title-lg font-title-lg text-primary mb-4 pb-2 border-b border-outline-variant font-bold">
-                  Personal Details
+                  Personal details
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Full Name */}
                   <div className="md:col-span-2">
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="fullName">
-                      Full Name <span className="text-error">*</span>
+                      Full name <span className="text-error">*</span>
                     </label>
                     <input
                       id="fullName"
@@ -138,12 +138,12 @@ export default function RegisterPage() {
                   {/* Email */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="email">
-                      Email Address <span className="text-error">*</span>
+                      Email address <span className="text-error">*</span>
                     </label>
                     <input
                       id="email"
                       type="email"
-                      placeholder="student@example.com"
+                      placeholder="example@gmail.com"
                       className={`w-full bg-surface border ${
                         errors.email ? 'border-error' : 'border-outline-variant'
                       } rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none`}
@@ -157,12 +157,12 @@ export default function RegisterPage() {
                   {/* Phone */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="phone">
-                      Phone Number <span className="text-error">*</span>
+                      Phone number <span className="text-error">*</span>
                     </label>
                     <input
                       id="phone"
                       type="tel"
-                      placeholder="e.g. 9876543210"
+                      placeholder="9988776655"
                       className={`w-full bg-surface border ${
                         errors.phone ? 'border-error' : 'border-outline-variant'
                       } rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none`}
@@ -233,17 +233,17 @@ export default function RegisterPage() {
               {/* Section: Address */}
               <div className="pt-4">
                 <h2 className="text-title-lg font-title-lg text-primary mb-4 pb-2 border-b border-outline-variant font-bold">
-                  Address Details
+                  Address details
                 </h2>
                 <div>
                   {/* Address */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="address">
-                      Residential Address <span className="text-error">*</span>
+                      Residential address <span className="text-error">*</span>
                     </label>
                     <textarea
                       id="address"
-                      placeholder="Street, Neighborhood, Flat / House No."
+                      placeholder="Flat / House number, street, city, district, state, PIN"
                       rows={3}
                       className={`w-full bg-surface border ${
                         errors.address ? 'border-error' : 'border-outline-variant'
@@ -261,13 +261,13 @@ export default function RegisterPage() {
               {/* Section: Academic Details */}
               <div className="pt-4">
                 <h2 className="text-title-lg font-title-lg text-primary mb-4 pb-2 border-b border-outline-variant font-bold">
-                  Academic Details
+                  Academic details
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* School Name */}
                   <div className="md:col-span-2">
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="schoolName">
-                      School/Institution Name <span className="text-error">*</span>
+                      School/institution name <span className="text-error">*</span>
                     </label>
                     <input
                       id="schoolName"
@@ -286,7 +286,7 @@ export default function RegisterPage() {
                   {/* Place */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="place">
-                      Place/City <span className="text-error">*</span>
+                      Place/city <span className="text-error">*</span>
                     </label>
                     <input
                       id="place"
@@ -305,7 +305,7 @@ export default function RegisterPage() {
                   {/* Class */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="class">
-                      Class/Grade <span className="text-error">*</span>
+                      Class/grade <span className="text-error">*</span>
                     </label>
                     <div className="relative">
                       <select
@@ -316,7 +316,7 @@ export default function RegisterPage() {
                         {...register('class')}
                         disabled={isPending}
                       >
-                        <option value="">Select Class</option>
+                        <option value="">Select class</option>
                         <option value="1">Class 1</option>
                         <option value="2">Class 2</option>
                         <option value="3">Class 3</option>
@@ -365,7 +365,7 @@ export default function RegisterPage() {
                       Saving...
                     </>
                   ) : (
-                    'Save & Continue'
+                    'Save & continue'
                   )}
                 </button>
               </div>

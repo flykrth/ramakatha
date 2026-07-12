@@ -89,7 +89,7 @@ export default function DashboardContent({
       <section className="mb-xl max-w-sm">
         <div className="bg-surface rounded-xl p-md border border-outline-variant shadow-sm flex flex-col justify-between">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-label-md font-label-md text-on-surface-variant font-semibold">Registered Events</h3>
+            <h3 className="text-label-md font-label-md text-on-surface-variant font-semibold">Registered events</h3>
             <span className="material-symbols-outlined text-primary">event_available</span>
           </div>
           <p className="text-display-lg font-display-lg text-on-surface font-bold">{registrations.length}</p>
@@ -99,14 +99,14 @@ export default function DashboardContent({
       {/* My Registrations Section */}
       <section>
         <div className="flex items-center justify-between mb-md">
-          <h3 className="text-title-lg font-title-lg text-on-surface font-bold">My Registrations</h3>
+          <h3 className="text-title-lg font-title-lg text-on-surface font-bold">My registrations</h3>
           {registrations.length > 0 && (
             <Link
               href="/competitions"
               className="px-4 py-2 bg-primary text-on-primary text-label-sm font-label-sm rounded-lg hover:opacity-90 transition-opacity font-bold flex items-center gap-1.5"
             >
               <span className="material-symbols-outlined text-xs">add</span>
-              Register Another Event
+              Register another event
             </Link>
           )}
         </div>
@@ -117,7 +117,7 @@ export default function DashboardContent({
             <div className="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-4 text-on-surface-variant">
               <span className="material-symbols-outlined text-3xl">event_busy</span>
             </div>
-            <h4 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">No Registrations Yet</h4>
+            <h4 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">No registrations yet</h4>
             <p className="text-body-md font-body-md text-on-surface-variant mb-6 max-w-md">
               You haven't registered for any events yet. Browse available competitions to get started.
             </p>
@@ -126,7 +126,7 @@ export default function DashboardContent({
               className="px-6 py-3 bg-primary text-on-primary text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2 font-bold"
             >
               <span className="material-symbols-outlined text-sm">search</span>
-              Browse Events
+              Browse events
             </Link>
           </div>
         ) : (
@@ -150,7 +150,7 @@ export default function DashboardContent({
                       </p>
                       <p className="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
                         <span className="material-symbols-outlined text-sm">explore</span>
-                        Submission Mode: {reg.competitions.venue}
+                        Submission mode: {reg.competitions.venue}
                       </p>
                       <p className="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
                         <span className="material-symbols-outlined text-sm">fingerprint</span>
@@ -167,7 +167,7 @@ export default function DashboardContent({
                     href={`/competitions/${reg.competitions.id}`}
                     className="px-4 py-2 bg-primary-container text-on-primary-container text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity text-center grow md:grow-0"
                   >
-                    View Guidelines
+                    View guidelines
                   </Link>
                   <button
                     onClick={() =>
@@ -175,7 +175,7 @@ export default function DashboardContent({
                     }
                     className="px-4 py-2 border border-error text-error text-label-md font-label-md rounded-lg hover:bg-error-container/10 transition-colors cursor-pointer text-center"
                   >
-                    Remove Registration
+                    Remove registration
                   </button>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function DashboardContent({
                 <div className="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-error">
                   <span className="material-symbols-outlined">warning</span>
                 </div>
-                <h3 className="text-title-lg font-title-lg text-on-surface font-bold font-serif">Cancel Registration</h3>
+                <h3 className="text-title-lg font-title-lg text-on-surface font-bold font-serif">Cancel registration</h3>
               </div>
               <button
                 className="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"
@@ -218,7 +218,7 @@ export default function DashboardContent({
                 className="px-4 py-2 border border-outline text-on-surface text-label-md font-label-md rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer"
                 onClick={() => setIsModalOpen(false)}
               >
-                Keep Registration
+                Keep registration
               </button>
               <button
                 disabled={isPending}
@@ -233,7 +233,7 @@ export default function DashboardContent({
                     Removing...
                   </>
                 ) : (
-                  'Yes, Remove'
+                  'Yes, remove'
                 )}
               </button>
             </div>

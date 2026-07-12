@@ -32,7 +32,7 @@ export default async function CompetitionsPage() {
         {/* Header Section */}
         <div className="mb-lg text-center md:text-left">
           <h1 className="text-headline-lg-mobile md:text-headline-lg font-serif text-primary mb-sm">
-            Cultural Competitions
+            Cultural competitions
           </h1>
           <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
             Explore and register for upcoming events. We have selected competitions tailored to your eligibility (Class {student.class}).

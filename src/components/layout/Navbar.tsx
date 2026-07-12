@@ -100,7 +100,7 @@ export default function Navbar({ student }: NavbarProps) {
                 onClick={() => setIsLoginModalOpen(true)}
                 className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-2 px-6 rounded-[12px] hover:shadow-level-2 transition-all cursor-pointer"
               >
-                Student Login
+                Student login
               </button>
             )}
           </div>
@@ -153,7 +153,7 @@ export default function Navbar({ student }: NavbarProps) {
                 }}
                 className="w-full bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 rounded-[12px] text-center"
               >
-                Student Login
+                Student login
               </button>
             )}
           </div>
@@ -169,7 +169,7 @@ export default function Navbar({ student }: NavbarProps) {
           ></div>
           <div className="bg-surface rounded-xl shadow-lg border border-outline-variant p-md max-w-md w-full relative z-10 fade-in">
             <div className="flex items-start justify-between mb-4">
-              <h3 className="text-title-lg font-title-lg text-primary font-bold">Student Portal Login</h3>
+              <h3 className="text-title-lg font-title-lg text-primary font-bold">Student portal login</h3>
               <button
                 className="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer"
                 onClick={() => setIsLoginModalOpen(false)}
@@ -184,13 +184,13 @@ export default function Navbar({ student }: NavbarProps) {
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="block text-label-sm font-semibold text-on-surface mb-2" htmlFor="loginEmail">
-                  Registered Email Address
+                  Registered email address
                 </label>
                 <input
                   id="loginEmail"
                   type="email"
                   required
-                  placeholder="student@example.com"
+                  placeholder="example@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none"
@@ -200,13 +200,13 @@ export default function Navbar({ student }: NavbarProps) {
 
               <div>
                 <label className="block text-label-sm font-semibold text-on-surface mb-2" htmlFor="loginPhone">
-                  Registered Mobile Number
+                  Registered mobile number
                 </label>
                 <input
                   id="loginPhone"
                   type="tel"
                   required
-                  placeholder="e.g. 9876543210"
+                  placeholder="9988776655"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   className="w-full bg-surface border border-outline-variant rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:border-primary focus:ring-0 input-glow transition-all outline-none"
@@ -238,7 +238,7 @@ export default function Navbar({ student }: NavbarProps) {
                       Verifying...
                     </>
                   ) : (
-                    'Log In'
+                    'Log in'
                   )}
                 </button>
               </div>

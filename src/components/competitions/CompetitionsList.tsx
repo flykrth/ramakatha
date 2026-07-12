@@ -34,7 +34,7 @@ export default function CompetitionsList({
       {competitions.length === 0 ? (
         <div className="bg-surface border border-outline-variant border-dashed rounded-xl p-xl flex flex-col items-center justify-center text-center">
           <span className="material-symbols-outlined text-4xl text-on-surface-variant mb-4">search_off</span>
-          <h4 className="text-title-lg font-title-lg text-on-surface mb-2">No Competitions Found</h4>
+          <h4 className="text-title-lg font-title-lg text-on-surface mb-2">No competitions found</h4>
           <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
             There are currently no competitions available for your class category.
           </p>
@@ -120,7 +120,7 @@ export default function CompetitionsList({
                             <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
                               groups
                             </span>
-                            Team Event (Max {comp.max_team_size})
+                            Team event (Max {comp.max_team_size})
                           </div>
                         )}
                       </div>
@@ -139,7 +139,7 @@ export default function CompetitionsList({
                           disabled
                           className="w-full border border-outline text-on-surface-variant/50 px-4 py-2.5 rounded-xl font-label-md text-label-md bg-surface-container cursor-not-allowed text-center"
                         >
-                          Registrations Closed
+                          Registrations closed
                         </button>
                       ) : (
                         <>
@@ -147,14 +147,14 @@ export default function CompetitionsList({
                             href={`/competitions/${comp.id}`}
                             className="bg-primary-container text-white px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-primary transition-colors flex items-center justify-center gap-2 cursor-pointer grow text-center font-bold"
                           >
-                            Register Now
+                            Register now
                           </Link>
                           {isFeatured && (
                             <Link
                               href={`/competitions/${comp.id}`}
                               className="border border-outline text-on-surface px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center justify-center gap-2 cursor-pointer text-center"
                             >
-                              View Guidelines
+                              View guidelines
                               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
                                 arrow_forward
                               </span>
