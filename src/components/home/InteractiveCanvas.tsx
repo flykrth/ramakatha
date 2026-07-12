@@ -45,8 +45,8 @@ export default function InteractiveCanvas() {
         this.y = Math.random() * height
         this.vx = (Math.random() - 0.5) * 0.3
         this.vy = (Math.random() - 0.5) * 0.3
-        this.radius = Math.random() * 2 + 1
-        this.color = `rgba(254, 152, 50, ${Math.random() * 0.4 + 0.15})`
+        this.radius = Math.random() * 2.5 + 1.2
+        this.color = Math.random() > 0.5 ? 'rgba(87, 0, 0, 0.4)' : 'rgba(143, 78, 0, 0.45)'
       }
 
       update() {
@@ -94,11 +94,11 @@ export default function InteractiveCanvas() {
           const dist = Math.hypot(dx, dy)
 
           if (dist < connectionDistance) {
-            const alpha = (1 - dist / connectionDistance) * 0.15
+            const alpha = (1 - dist / connectionDistance) * 0.28
             ctx.beginPath()
             ctx.moveTo(p1.x, p1.y)
             ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(254, 152, 50, ${alpha})`
+            ctx.strokeStyle = `rgba(143, 78, 0, ${alpha})`
             ctx.lineWidth = 0.6
             ctx.stroke()
           }
@@ -111,11 +111,11 @@ export default function InteractiveCanvas() {
           const dy = p.y - mouse.y
           const dist = Math.hypot(dx, dy)
           if (dist < mouse.radius) {
-            const alpha = (1 - dist / mouse.radius) * 0.2
+            const alpha = (1 - dist / mouse.radius) * 0.38
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(mouse.x, mouse.y)
-            ctx.strokeStyle = `rgba(212, 175, 55, ${alpha})`
+            ctx.strokeStyle = `rgba(87, 0, 0, ${alpha})`
             ctx.lineWidth = 0.8
             ctx.stroke()
           }
