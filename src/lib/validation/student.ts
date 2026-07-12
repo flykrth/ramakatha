@@ -44,3 +44,21 @@ export const studentSchema = z.object({
 })
 
 export type StudentInput = z.infer<typeof studentSchema>
+
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .trim()
+    .min(1, 'Email is required')
+    .email('Please enter a valid email address'),
+  phone: z
+    .string()
+    .trim()
+    .min(1, 'Phone number is required')
+    .regex(
+      /^(?:\+91[\-\s]?)?[6-9]\d{9}$/,
+      'Please enter a valid 10-digit Indian phone number (optionally prefixed with +91)'
+    ),
+})
+
+export type LoginInput = z.infer<typeof loginSchema>

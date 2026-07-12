@@ -186,12 +186,12 @@ export default function RegisterPage() {
                         <input
                           type="radio"
                           value="male"
-                          className="sr-only"
+                          className="peer sr-only"
                           checked={genderValue === 'male'}
                           onChange={() => setValue('gender', 'male', { shouldValidate: true })}
                           disabled={isPending}
                         />
-                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all ${
+                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 ${
                           genderValue === 'male' 
                             ? 'border-primary bg-primary' 
                             : 'border-outline-variant bg-surface group-hover:border-primary'
@@ -208,12 +208,12 @@ export default function RegisterPage() {
                         <input
                           type="radio"
                           value="female"
-                          className="sr-only"
+                          className="peer sr-only"
                           checked={genderValue === 'female'}
                           onChange={() => setValue('gender', 'female', { shouldValidate: true })}
                           disabled={isPending}
                         />
-                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all ${
+                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 ${
                           genderValue === 'female' 
                             ? 'border-primary bg-primary' 
                             : 'border-outline-variant bg-surface group-hover:border-primary'

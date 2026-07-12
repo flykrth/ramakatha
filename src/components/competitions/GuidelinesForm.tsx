@@ -252,7 +252,7 @@ export default function GuidelinesForm({
                   className="peer sr-only"
                   disabled={isPending || isRegistrationBlocked}
                 />
-                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
+                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 transition-colors flex items-center justify-center group-hover:border-primary">
                   <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
                     check
                   </span>
@@ -272,7 +272,7 @@ export default function GuidelinesForm({
                   className="peer sr-only"
                   disabled={isPending || isRegistrationBlocked}
                 />
-                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center group-hover:border-primary">
+                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 transition-colors flex items-center justify-center group-hover:border-primary">
                   <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
                     check
                   </span>

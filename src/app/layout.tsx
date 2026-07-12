@@ -17,8 +17,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ramakatha 2026",
-  description: "Official student competition portal conducted by Amrita LEAP, Amrita Vishwa Vidyapeetham.",
+  title: "Ramakatha 2026 | Amrita LEAP",
+  description: "Official student competition portal for Ramakatha 2026, conducted by Amrita LEAP, Amrita Vishwa Vidyapeetham.",
+  metadataBase: new URL("https://ramakatha.amrita.edu"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Ramakatha 2026 | Amrita LEAP",
+    description: "Official student competition portal for Ramakatha 2026, conducted by Amrita LEAP, Amrita Vishwa Vidyapeetham.",
+    url: "/",
+    siteName: "Ramakatha 2026",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ramakatha 2026 | Amrita LEAP",
+    description: "Official student competition portal for Ramakatha 2026, conducted by Amrita LEAP, Amrita Vishwa Vidyapeetham.",
+  },
 };
 
 export default function RootLayout({
