@@ -59,16 +59,10 @@ export default function GuidelinesForm({
     if (!checkRules || !checkEligibility || isRegistrationBlocked) return
     setError('')
 
-    // Generate random mock registration ID for optimistic display
-    // e.g. RK-2026-ST-8492
-    const catCode = competition.title.substring(0, 2).toUpperCase()
-    const randNum = Math.floor(1000 + Math.random() * 9000)
-    const mockRegId = `RK-2026-${catCode}-${randNum}`
-
     startTransition(async () => {
       const res = await registerForEventAction(competition.id, competition.category)
       if (res.success) {
-        setRegId(mockRegId)
+        setRegId(res.registrationId || '')
         setShowSuccess(true)
       } else {
         setError(res.error || 'Failed to register')
@@ -93,7 +87,7 @@ export default function GuidelinesForm({
           </div>
           <h2 className="text-headline-lg font-headline-lg text-primary mb-2 font-serif">Registration successful</h2>
           <p className="text-body-lg font-body-lg text-on-surface-variant mb-8">
-            You have successfully registered for <strong>{competition.title}</strong>. A confirmation email has been sent to your institutional address.
+            You have successfully registered for <strong>{competition.title}</strong>.
           </p>
           <div className="w-full bg-surface-container-low rounded-lg p-4 mb-8 text-left border border-outline-variant">
             <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">

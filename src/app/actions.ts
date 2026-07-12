@@ -110,16 +110,16 @@ export async function registerForEventAction(competitionId: string, category: st
     }
 
     logger.info('Processing event registration action', { studentId: student.id, competitionId, ip })
-    await registerForCompetition(student.id, idResult.data, category.trim())
+    const registration = await registerForCompetition(student.id, idResult.data, category.trim())
     logger.info('Event registration action completed successfully', { studentId: student.id, competitionId })
+    
+    revalidatePath('/dashboard')
+    revalidatePath('/competitions')
+    return { success: true, registrationId: registration.registration_id }
   } catch (err: any) {
     logger.error('Event registration action failed', err, { competitionId, ip })
     return { success: false, error: err.message || 'Failed to register for competition' }
   }
-
-  revalidatePath('/dashboard')
-  revalidatePath('/competitions')
-  return { success: true }
 }
 
 export async function removeRegistrationAction(competitionId: string) {
