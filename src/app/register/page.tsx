@@ -61,7 +61,7 @@ export default function RegisterPage() {
       <Navbar student={null} />
 
       {/* Main Content */}
-      <main className="pt-28 pb-xl flex-grow bg-background">
+      <main className="pt-28 pb-xl flex-grow">
         <div className="max-w-[800px] mx-auto px-margin-mobile md:px-lg">
           {/* Page Header */}
           <div className="mb-lg text-center">
