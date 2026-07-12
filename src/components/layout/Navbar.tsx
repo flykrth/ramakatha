@@ -63,7 +63,7 @@ export default function Navbar({ student }: NavbarProps) {
               alt="Ramakatha Logo"
               className="w-10 h-10 object-contain shrink-0"
             />
-            <span className="font-hindi tracking-wider text-2xl transform -translate-y-[2px]">Ramakatha 2026</span>
+            <span className="font-hindi tracking-wider text-2xl">Ramakatha 2026</span>
           </Link>
 
           {/* Desktop Navigation */}

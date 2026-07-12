@@ -1,12 +1,12 @@
--- Seed actual competitions and guidelines for Ramakatha 2026
+-- Migration: Reset database and seed official production competitions & guidelines with professional UUIDs
 
--- Clean existing data
+-- 1. Purge all existing tables in correct dependency order
 truncate public.student_registrations cascade;
 truncate public.competition_guidelines cascade;
 truncate public.competitions cascade;
 delete from auth.users;
 
--- Insert Competitions
+-- 2. Insert Official Competitions
 insert into public.competitions (id, title, description, category, event_date, venue, duration, age_group, eligible_classes, max_team_size, is_school_wise, status)
 values
   -- Class 6-8 Competitions
@@ -154,7 +154,7 @@ values
     'open'
   );
 
--- Insert Guidelines for all 10 Competitions
+-- 3. Insert Competition Guidelines
 insert into public.competition_guidelines (id, competition_id, general_rules, scoring_criteria)
 values
   -- Storytelling
