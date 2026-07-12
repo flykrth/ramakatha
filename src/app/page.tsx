@@ -33,7 +33,7 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
             <Link
               href={student ? '/dashboard' : '/register'}
-              className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 px-8 rounded-[12px] hover:shadow-level-2 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
+              className="relative overflow-hidden bg-gradient-to-r from-primary via-[#D4AF37] to-primary hover:from-[#D4AF37] hover:to-primary text-white font-bold text-label-md font-label-md py-3.5 px-9 rounded-[12px] shadow-level-1 hover:shadow-level-3 hover:scale-[1.04] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto animate-pulse-glow animate-shine-slide border border-[#D4AF37]/30"
             >
               {student ? 'Go to dashboard' : 'Register now'}
             </Link>
