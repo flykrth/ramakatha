@@ -28,9 +28,9 @@ export default function InteractiveCanvas() {
     }
 
     const particles: ParticleType[] = []
-    const particleCount = Math.min(80, Math.floor((width * height) / 18000))
-    const connectionDistance = 120
-    const mouse = { x: null as number | null, y: null as number | null, radius: 180 }
+    const particleCount = Math.min(30, Math.floor((width * height) / 75000))
+    const connectionDistance = 100
+    const mouse = { x: null as number | null, y: null as number | null, radius: 120 }
 
     class Particle implements ParticleType {
       x: number

@@ -29,6 +29,7 @@ export default function Navbar({ student }: NavbarProps) {
         setIsLoginModalOpen(false)
         setEmail('')
         setPhone('')
+        window.dispatchEvent(new CustomEvent('show-splash', { detail: { message: 'Logging into student portal...' } }))
         router.push('/dashboard')
       } else {
         setLoginError(res.error || 'Failed to sign in')
@@ -37,6 +38,7 @@ export default function Navbar({ student }: NavbarProps) {
   }
 
   const handleLogout = async () => {
+    window.dispatchEvent(new CustomEvent('show-splash', { detail: { message: 'Logging out...' } }))
     await signOutStudentAction()
     router.push('/')
   }

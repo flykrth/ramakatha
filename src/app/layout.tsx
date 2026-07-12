@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import InteractiveCanvas from "@/components/home/InteractiveCanvas";
+import TransitionSplash from "@/components/common/TransitionSplash";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -103,6 +104,9 @@ export default function RootLayout({
         <div className="relative z-10 flex flex-col min-h-screen">
           {children}
         </div>
+
+        {/* Global Splash Screen Overlay */}
+        <TransitionSplash />
       </body>
     </html>
   );

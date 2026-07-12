@@ -80,6 +80,7 @@ export default function GuidelinesForm({
     setCheckRules(false)
     setCheckEligibility(false)
     setShowSuccess(false)
+    window.dispatchEvent(new CustomEvent('show-splash', { detail: { message: 'Loading competitions...' } }))
     router.push('/competitions')
   }
 
@@ -107,15 +108,18 @@ export default function GuidelinesForm({
             >
               Register another event
             </button>
-            <Link
-              href="/dashboard"
-              className="flex-1 py-3 px-4 rounded-xl bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-on-primary-fixed-variant transition-colors flex items-center justify-center gap-2"
+            <button
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('show-splash', { detail: { message: 'Loading student dashboard...' } }))
+                router.push('/dashboard')
+              }}
+              className="flex-1 py-3 px-4 rounded-xl bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-on-primary-fixed-variant transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               Back to dashboard
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
                 arrow_forward
               </span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>

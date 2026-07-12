@@ -44,8 +44,10 @@ export default function RegisterPage() {
     try {
       const res = await registerStudentAction(data)
       if (res.success) {
-        // Redirect to Step 2: Event Selection (competitions page)
-        router.push('/competitions')
+        window.dispatchEvent(new CustomEvent('show-splash', { detail: { message: 'Creating your student profile...' } }))
+        setTimeout(() => {
+          router.push('/competitions')
+        }, 1500)
       } else {
         setError(res.error || 'Failed to register. Please try again.')
       }
