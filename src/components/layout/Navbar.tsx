@@ -100,7 +100,7 @@ export default function Navbar({ student }: NavbarProps) {
             ) : (
               <button
                 onClick={() => setIsLoginModalOpen(true)}
-                className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-2 px-6 rounded-[12px] hover:shadow-level-2 transition-all cursor-pointer"
+                className="relative overflow-hidden bg-gradient-to-r from-primary via-[#b58a3d] to-primary hover:from-[#b58a3d] hover:to-primary text-white font-bold text-label-md font-label-md py-2 px-6 rounded-[12px] shadow-level-1 hover:shadow-level-3 hover:scale-[1.04] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer animate-pulse-glow animate-shine-slide border border-[#b58a3d]/30"
               >
                 Student login
               </button>
@@ -153,7 +153,7 @@ export default function Navbar({ student }: NavbarProps) {
                   setIsMobileMenuOpen(false)
                   setIsLoginModalOpen(true)
                 }}
-                className="w-full bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 rounded-[12px] text-center"
+                className="relative overflow-hidden w-full bg-gradient-to-r from-primary via-[#b58a3d] to-primary hover:from-[#b58a3d] hover:to-primary text-white font-bold text-label-md font-label-md py-3 rounded-[12px] shadow-level-1 hover:shadow-level-3 hover:scale-[1.02] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer animate-pulse-glow animate-shine-slide border border-[#b58a3d]/30"
               >
                 Student login
               </button>
