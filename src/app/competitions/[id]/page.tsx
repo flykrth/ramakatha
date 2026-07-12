@@ -30,8 +30,11 @@ export default async function CompetitionDetailsPage({ params }: PageProps) {
     redirect('/competitions')
   }
 
-  // Security check: Verify student class is eligible for this division or if it's school-wise
-  const isEligible = competition.is_school_wise || competition.eligible_classes.includes(student.class)
+  // Security check: Verify student class is eligible for this division
+  const isEligible = student.class === 'School login'
+    ? competition.is_school_wise
+    : (!competition.is_school_wise && competition.eligible_classes.includes(student.class))
+
   if (!isEligible) {
     // If not eligible, strictly redirect them to the browse page
     redirect('/competitions')
@@ -40,7 +43,7 @@ export default async function CompetitionDetailsPage({ params }: PageProps) {
   // Fetch existing registrations to check limits
   const registrations = await getStudentRegistrations(student.id)
   const isAlreadyRegistered = registrations.some((r: any) => r.competitions && r.competitions.id === competition.id)
-  const hasRegisteredClassEvent = registrations.some((r: any) => r.competitions && !r.competitions.is_school_wise)
+  const hasRegisteredClassEvent = registrations.length > 0
 
   return (
     <>

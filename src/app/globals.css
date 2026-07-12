@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import "tailwindcss";
 
 .font-hindi {
-  font-family: 'Monsieur La Doulaise', cursive;
+  font-family: 'Yatra One', cursive;
 }
 
 @theme {

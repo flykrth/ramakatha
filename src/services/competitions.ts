@@ -10,8 +10,11 @@ export async function getCompetitions(studentClass?: string) {
   }
 
   if (studentClass) {
+    if (studentClass === 'School login') {
+      return (data || []).filter((comp: any) => comp.is_school_wise)
+    }
     return (data || []).filter(
-      (comp: any) => comp.is_school_wise || (comp.eligible_classes && comp.eligible_classes.includes(studentClass))
+      (comp: any) => !comp.is_school_wise && comp.eligible_classes && comp.eligible_classes.includes(studentClass)
     )
   }
 

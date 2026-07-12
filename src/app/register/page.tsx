@@ -344,6 +344,7 @@ export default function RegisterPage() {
                         <option value="10">Class 10</option>
                         <option value="11">Class 11</option>
                         <option value="12">Class 12</option>
+                        <option value="School login">School login</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-on-surface-variant">
                         <span className="material-symbols-outlined">expand_more</span>
@@ -391,9 +392,9 @@ export default function RegisterPage() {
             <div className="text-title-lg font-title-lg text-primary font-bold font-hindi tracking-wider">Ramakatha 2026</div>
           </div>
           <div className="col-span-1 md:col-span-3 flex flex-wrap gap-6 md:justify-end text-body-md font-body-md text-on-surface-variant">
-            <a href="tel:+919778402692" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
+            <a href="tel:+918281494744" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>phone</span>
-              +91 97784 02692
+              +91 8281494744
             </a>
             <a href="mailto:amritaleap@am.amrita.edu" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
               <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>mail</span>

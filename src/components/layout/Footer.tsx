@@ -11,9 +11,9 @@ export default function Footer() {
           </p>
         </div>
         <div className="md:col-span-3 flex flex-wrap gap-6 md:justify-end text-body-md font-body-md text-on-surface-variant">
-          <a href="tel:+919778402692" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
+          <a href="tel:+918281494744" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
             <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>phone</span>
-            +91 97784 02692
+            +91 8281494744
           </a>
           <a href="mailto:amritaleap@am.amrita.edu" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
             <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>mail</span>

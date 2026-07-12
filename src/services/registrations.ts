@@ -29,22 +29,16 @@ export async function registerForCompetition(studentId: string, competitionId: s
   if (checkError) throw new Error('Database error checking registration')
   if (existing) throw new Error('You are already registered for this competition')
 
-  // 3. If it's a class-category event (not school-wise), check if registered for another class-category event
-  if (!comp.is_school_wise) {
-    const { data: regs, error: regsError } = await supabase
-      .from('student_registrations')
-      .select('*, competitions(is_school_wise)')
-      .eq('student_id', studentId)
+  // 3. A student can only register for a single event in total
+  const { data: regs, error: regsError } = await supabase
+    .from('student_registrations')
+    .select('id')
+    .eq('student_id', studentId)
 
-    if (regsError) throw new Error('Error checking class category limits')
+  if (regsError) throw new Error('Error checking registration limits')
 
-    const hasClassCategoryEvent = (regs || []).some(
-      (r: any) => r.competitions && !r.competitions.is_school_wise
-    )
-
-    if (hasClassCategoryEvent) {
-      throw new Error('You can only register for a single event under your class category.')
-    }
+  if (regs && regs.length >= 1) {
+    throw new Error('You can only register for a single event under your class category.')
   }
 
   const regId = generateRegId(category)
