@@ -89,12 +89,30 @@ export default function GuidelinesForm({
           <p className="text-body-lg font-body-lg text-on-surface-variant mb-8">
             You have successfully registered for <strong>{competition.title}</strong>.
           </p>
-          <div className="w-full bg-surface-container-low rounded-lg p-4 mb-8 text-left border border-outline-variant">
+          <div className="w-full bg-surface-container-low rounded-lg p-4 mb-6 text-left border border-outline-variant">
             <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">
               Registration ID
             </span>
             <span className="text-title-lg font-title-lg text-on-surface font-mono font-bold">{regId}</span>
           </div>
+          <div className="w-full bg-[#25D366]/10 rounded-lg p-4 mb-6 text-left border border-[#25D366]/30 flex flex-col gap-2">
+            <span className="text-label-sm font-label-sm text-[#25D366] uppercase tracking-wider block font-bold">
+              Important: Join event WhatsApp group
+            </span>
+            <p className="text-body-md text-on-surface-variant">
+              Please join our official WhatsApp group for further announcements, updates, and coordinator contacts:
+            </p>
+            <a
+              href="https://chat.whatsapp.com/JY7loDZQ0NIG4lYgTmaQSx?s=cl&p=a&ilr=4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 py-2 px-4 bg-[#25D366] text-white rounded-lg font-bold text-center hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+            >
+              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>chat</span>
+              Join WhatsApp group
+            </a>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <button
               onClick={resetForm}

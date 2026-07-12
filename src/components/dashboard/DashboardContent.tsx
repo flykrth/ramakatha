@@ -162,18 +162,27 @@ export default function DashboardContent({
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 mt-6">
+                <div className="flex flex-wrap items-center gap-4 mt-6">
                   <Link
                     href={`/competitions/${reg.competitions.id}`}
-                    className="px-4 py-2 bg-primary-container text-on-primary-container text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity text-center grow md:grow-0"
+                    className="px-4 py-2 bg-primary-container text-on-primary-container text-label-md font-label-md rounded-lg hover:opacity-90 transition-opacity text-center grow md:grow-0 font-bold"
                   >
                     View guidelines
                   </Link>
+                  <a
+                    href="https://chat.whatsapp.com/JY7loDZQ0NIG4lYgTmaQSx?s=cl&p=a&ilr=4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 border border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 text-label-md font-label-md rounded-lg transition-colors text-center grow md:grow-0 flex items-center justify-center gap-1.5 font-bold"
+                  >
+                    <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>chat</span>
+                    Join WhatsApp
+                  </a>
                   <button
                     onClick={() =>
                       handleOpenRemoveModal({ id: reg.competitions.id, title: reg.competitions.title })
                     }
-                    className="px-4 py-2 border border-error text-error text-label-md font-label-md rounded-lg hover:bg-error-container/10 transition-colors cursor-pointer text-center"
+                    className="px-4 py-2 border border-error text-error text-label-md font-label-md rounded-lg hover:bg-error-container/10 transition-colors cursor-pointer text-center grow md:grow-0"
                   >
                     Remove registration
                   </button>
