@@ -50,7 +50,7 @@ export default async function Home() {
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-8">
               <p className="text-white text-title-lg font-title-lg max-w-2xl text-left font-serif leading-relaxed">
-                Ramayana is not just a story. It is a journey of values, courage and devotion that transcends time. Join us in celebrating this epic through art, performance and community.
+                Ramayana is not just a story. It is a journey of values, courage and devotion that transcends time.
               </p>
             </div>
           </div>
