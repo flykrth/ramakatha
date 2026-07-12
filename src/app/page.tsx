@@ -16,9 +16,29 @@ export default async function Home() {
         {/* Animated Background Graphics */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           {/* Glowing mesh blobs */}
-          <div className="absolute top-[10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-secondary-container/[0.04] blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-[40%] right-[10%] w-[400px] h-[400px] rounded-full bg-[#D4AF37]/[0.03] blur-[100px] animate-pulse" style={{ animationDelay: '4s' }}></div>
+          <div className="absolute top-[10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-primary/[0.06] blur-[120px] animate-flow-glow"></div>
+          <div className="absolute bottom-[10%] right-[-10%] w-[700px] h-[700px] rounded-full bg-secondary-container/[0.05] blur-[150px] animate-flow-glow" style={{ animationDelay: '-5s' }}></div>
+          <div className="absolute top-[40%] left-[30%] w-[500px] h-[500px] rounded-full bg-[#D4AF37]/[0.04] blur-[100px] animate-flow-glow" style={{ animationDelay: '-10s' }}></div>
+
+          {/* Floating firefly/glowing particles */}
+          <div className="particle w-2 h-2" style={{ left: '10%', animationDelay: '0s', animationDuration: '14s' }}></div>
+          <div className="particle w-3 h-3" style={{ left: '25%', animationDelay: '2s', animationDuration: '18s' }}></div>
+          <div className="particle w-1.5 h-1.5" style={{ left: '40%', animationDelay: '4s', animationDuration: '12s' }}></div>
+          <div className="particle w-4 h-4" style={{ left: '55%', animationDelay: '1s', animationDuration: '22s' }}></div>
+          <div className="particle w-2.5 h-2.5" style={{ left: '70%', animationDelay: '6s', animationDuration: '16s' }}></div>
+          <div className="particle w-3.5 h-3.5" style={{ left: '85%', animationDelay: '3s', animationDuration: '20s' }}></div>
+          <div className="particle w-2 h-2" style={{ left: '95%', animationDelay: '5s', animationDuration: '15s' }}></div>
+
+          {/* Sparkling stars */}
+          <svg className="absolute top-[25%] left-[15%] w-6 h-6 text-[#D4AF37]/35 animate-twinkle" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+          </svg>
+          <svg className="absolute top-[15%] right-[20%] w-4 h-4 text-[#D4AF37]/30 animate-twinkle" viewBox="0 0 24 24" fill="currentColor" style={{ animationDelay: '1.5s' }}>
+            <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+          </svg>
+          <svg className="absolute top-[50%] right-[10%] w-5 h-5 text-[#D4AF37]/25 animate-twinkle" viewBox="0 0 24 24" fill="currentColor" style={{ animationDelay: '3s' }}>
+            <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+          </svg>
 
           {/* Rotating Mandala Left */}
           <svg className="absolute -top-40 -left-40 w-[600px] h-[600px] text-primary/[0.02] animate-slow-rotate" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.25">
@@ -81,7 +101,7 @@ export default async function Home() {
           </div>
 
           {/* Decorative visual element */}
-          <div className="w-full mt-xl rounded-2xl overflow-hidden shadow-level-1 border border-outline-variant relative h-[400px]">
+          <div className="w-full mt-xl rounded-2xl overflow-hidden shadow-level-1 border border-outline-variant relative h-[400px] card-shine hover:scale-[1.01] hover:shadow-level-2 transition-all duration-500 group cursor-pointer">
             <div
               className="bg-cover bg-center w-full h-full absolute inset-0"
               style={{
