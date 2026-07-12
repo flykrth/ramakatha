@@ -7,6 +7,8 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { studentSchema, StudentInput } from '@/lib/validation/student'
 import { registerStudentAction } from '@/app/actions'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -55,53 +57,26 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="bg-surface text-on-surface antialiased flex min-h-screen">
-      {/* TopNavBar (Mobile Only) */}
-      <nav className="md:hidden flex justify-between items-center w-full px-margin-mobile h-20 bg-surface border-b border-outline-variant shadow-sm fixed top-0 z-50">
-        <div className="text-title-lg font-title-lg font-bold text-primary">Ramakatha 2026</div>
-        <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant text-primary font-bold">
-          R
-        </div>
-      </nav>
-
-      {/* SideNavBar (Desktop Only) */}
-      <aside className="hidden md:flex flex-col fixed left-0 top-0 h-full w-64 bg-surface border-r border-outline-variant py-base z-40">
-        <div className="px-4 py-4 mb-8">
-          <div className="text-headline-md font-headline-md text-primary mb-1 font-serif">Ramakatha 2026</div>
-          <div className="text-label-md font-label-md text-on-surface-variant">Student Portal</div>
-        </div>
-        <nav className="flex-1 px-2 space-y-2">
-          <div className="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-lg px-4 py-3 opacity-90 scale-95 shadow-level-1">
-            <span className="material-symbols-outlined">assignment_ind</span>
-            <span className="text-label-md font-label-md">Registration</span>
-          </div>
-          <div className="flex items-center gap-3 text-on-surface-variant/40 px-4 py-3 rounded-lg cursor-not-allowed">
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="text-label-md font-label-md">Overview</span>
-          </div>
-          <div className="flex items-center gap-3 text-on-surface-variant/40 px-4 py-3 rounded-lg cursor-not-allowed">
-            <span className="material-symbols-outlined">workspace_premium</span>
-            <span className="text-label-md font-label-md">Certificates</span>
-          </div>
-        </nav>
-      </aside>
+    <>
+      <Navbar student={null} />
 
       {/* Main Content */}
-      <main className="flex-grow md:ml-64 pt-20 md:pt-0 min-h-screen bg-background pb-xl">
-        <div className="max-w-[800px] mx-auto px-margin-mobile md:px-lg pt-lg">
+      <main className="pt-28 pb-xl flex-grow bg-background">
+        <div className="max-w-[800px] mx-auto px-margin-mobile md:px-lg">
           {/* Page Header */}
           <div className="mb-lg text-center">
-            <h1 className="text-headline-lg font-headline-lg text-on-surface mb-2 font-serif">Student Registration</h1>
+            <h1 className="text-headline-lg font-headline-lg text-on-surface mb-2 font-serif font-bold">Student Registration</h1>
             <p className="text-body-md font-body-md text-on-surface-variant">
               Please provide your personal and academic details.
             </p>
           </div>
 
           {/* Progress Stepper */}
-          <div className="mb-xl relative">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-outline-variant rounded-full -z-10"></div>
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-1 bg-primary rounded-full -z-10"></div>
-            <div className="flex justify-between items-center">
+          <div className="mb-xl relative max-w-md mx-auto">
+            {/* Thin connecting line matching the design */}
+            <div className="absolute left-0 right-0 top-4 -translate-y-1/2 h-0.5 bg-outline-variant z-0"></div>
+            
+            <div className="flex justify-between items-center relative z-10">
               {/* Step 1 (Active) */}
               <div className="flex flex-col items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-label-md font-label-md font-bold shadow-level-1 ring-4 ring-background">
@@ -203,39 +178,49 @@ export default function RegisterPage() {
                     <label className="block text-label-md font-label-md text-on-surface mb-2">
                       Gender <span className="text-error">*</span>
                     </label>
-                    <div className="flex gap-4 py-2">
-                      <label className="flex items-center gap-2 cursor-pointer">
+                    <div className="flex gap-6 py-2">
+                      {/* Male Option */}
+                      <label className="flex items-center gap-2.5 cursor-pointer group">
                         <input
                           type="radio"
                           value="male"
-                          className="text-primary border-outline-variant focus:ring-primary h-4 w-4"
+                          className="sr-only"
                           checked={genderValue === 'male'}
                           onChange={() => setValue('gender', 'male', { shouldValidate: true })}
                           disabled={isPending}
                         />
-                        <span className="text-body-md font-body-md text-on-surface-variant">Male</span>
+                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all ${
+                          genderValue === 'male' 
+                            ? 'border-primary bg-primary' 
+                            : 'border-outline-variant bg-surface group-hover:border-primary'
+                        }`}>
+                          <div className={`h-2.5 w-2.5 rounded-full bg-white transition-transform ${
+                            genderValue === 'male' ? 'scale-100' : 'scale-0'
+                          }`}></div>
+                        </div>
+                        <span className="text-body-md font-body-md text-on-surface-variant font-medium">Male</span>
                       </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
+
+                      {/* Female Option */}
+                      <label className="flex items-center gap-2.5 cursor-pointer group">
                         <input
                           type="radio"
                           value="female"
-                          className="text-primary border-outline-variant focus:ring-primary h-4 w-4"
+                          className="sr-only"
                           checked={genderValue === 'female'}
                           onChange={() => setValue('gender', 'female', { shouldValidate: true })}
                           disabled={isPending}
                         />
-                        <span className="text-body-md font-body-md text-on-surface-variant">Female</span>
-                      </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          value="other"
-                          className="text-primary border-outline-variant focus:ring-primary h-4 w-4"
-                          checked={genderValue === 'other'}
-                          onChange={() => setValue('gender', 'other', { shouldValidate: true })}
-                          disabled={isPending}
-                        />
-                        <span className="text-body-md font-body-md text-on-surface-variant">Other</span>
+                        <div className={`h-5 w-5 rounded-full border flex items-center justify-center transition-all ${
+                          genderValue === 'female' 
+                            ? 'border-primary bg-primary' 
+                            : 'border-outline-variant bg-surface group-hover:border-primary'
+                        }`}>
+                          <div className={`h-2.5 w-2.5 rounded-full bg-white transition-transform ${
+                            genderValue === 'female' ? 'scale-100' : 'scale-0'
+                          }`}></div>
+                        </div>
+                        <span className="text-body-md font-body-md text-on-surface-variant font-medium">Female</span>
                       </label>
                     </div>
                     {errors.gender && (
@@ -250,11 +235,11 @@ export default function RegisterPage() {
                 <h2 className="text-title-lg font-title-lg text-primary mb-4 pb-2 border-b border-outline-variant font-bold">
                   Address Details
                 </h2>
-                <div className="space-y-6">
-                  {/* Full Address */}
+                <div>
+                  {/* Address */}
                   <div>
                     <label className="block text-label-md font-label-md text-on-surface mb-2" htmlFor="address">
-                      Full Residential Address <span className="text-error">*</span>
+                      Residential Address <span className="text-error">*</span>
                     </label>
                     <textarea
                       id="address"
@@ -359,16 +344,18 @@ export default function RegisterPage() {
 
               {/* Actions */}
               <div className="pt-8 flex justify-end gap-4 border-t border-outline-variant mt-8">
-                <Link
-                  href="/"
-                  className="px-6 py-3 rounded-lg text-label-md font-label-md text-on-surface-variant border border-outline-variant hover:bg-surface-container-high transition-colors text-center"
+                <button
+                  type="button"
+                  onClick={() => router.push('/')}
+                  className="px-6 py-3 border border-outline text-on-surface text-label-md font-label-md rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer"
+                  disabled={isPending}
                 >
                   Cancel
-                </Link>
+                </button>
                 <button
                   type="submit"
+                  className="px-8 py-3 bg-primary text-white text-label-md font-label-md font-bold rounded-lg hover:opacity-90 transition-all flex items-center gap-2 cursor-pointer"
                   disabled={isPending}
-                  className="px-8 py-3 rounded-[12px] bg-primary text-white text-label-md font-label-md font-bold hover:bg-primary-container shadow-level-2 transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer"
                 >
                   {isPending ? (
                     <>
@@ -385,27 +372,9 @@ export default function RegisterPage() {
             </form>
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="w-full mt-xl bg-surface-container-low border-t border-outline-variant grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-lg max-w-max-width mx-auto">
-          <div className="col-span-1 md:col-span-4 mb-4">
-            <div className="text-title-lg font-title-lg text-primary font-bold font-hindi tracking-wider">Ramakatha 2026</div>
-          </div>
-          <div className="col-span-1 md:col-span-3 flex flex-wrap gap-6 md:justify-end text-body-md font-body-md text-on-surface-variant">
-            <a href="tel:+918281494744" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
-              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>phone</span>
-              +91 8281494744
-            </a>
-            <a href="mailto:amritaleap@am.amrita.edu" className="hover:text-primary transition-colors flex items-center gap-1.5 font-semibold">
-              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>mail</span>
-              amritaleap@am.amrita.edu
-            </a>
-          </div>
-          <div className="col-span-1 md:col-span-4 mt-4 text-body-md font-body-md text-on-surface-variant">
-            © 2026 Amrita LEAP. All rights reserved.
-          </div>
-        </footer>
       </main>
-    </div>
+
+      <Footer />
+    </>
   )
 }
