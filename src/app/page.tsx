@@ -36,7 +36,6 @@ export default async function Home() {
               className="bg-primary-container text-on-primary font-bold text-label-md font-label-md py-3 px-8 rounded-[12px] hover:shadow-level-2 transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               {student ? 'Go to dashboard' : 'Register now'}
-              <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>
 
