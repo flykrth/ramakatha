@@ -27,8 +27,7 @@ export default async function Home() {
           </h1>
 
           <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-10">
-            Celebrating Indian Cultural Heritage through Academic Excellence. Join institutions worldwide in a scholarly
-            exploration of epic traditions.
+            Celebrate the timeless wisdom of Ramayana through creativity & character.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
@@ -47,12 +46,12 @@ export default async function Home() {
               className="bg-cover bg-center w-full h-full absolute inset-0"
               style={{
                 backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDqIu31pKdk40Vsz0RRzay8A6bdpkWleqg5LHBKKAVL5dymuvISO3_LTCRtOulRKpG4lh8j1EcALTEWAzNPRqP9nGVMPm1pZT5XQcw91Hpw4DqA44zmcx2UEbWCD7rV521RqP0h45uJLgDpba0Yp39Y4LUJlJDktZ4bmmFgIqzGeNkSygrK-yCNjD5_b5qOIYPkRkK1TtPULuaCVeJuGMMt47N8wKmvlBy6XMW4kkFnIONckl6haUPFg')",
+                  "url('https://www.atmatattva.com/wp-content/uploads/2026/01/ramayana-01.jpg')",
               }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
               <p className="text-white text-title-lg font-title-lg max-w-lg text-left">
-                Fostering a deeper understanding of cultural narratives across generations.
+                Ramayana is not just a story. It is a journey of values, courage and devotion that transcends time. Join us in celebrating this epic through art, performance and community.
               </p>
             </div>
           </div>
