@@ -70,8 +70,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Teal: Classes 1-5 */}
             <div className="glass-card border border-[#008080]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#008080]/[0.02] hover:bg-[#008080]/[0.05] group">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-3xl text-[#008080]">child_care</span>
+              <div className="mb-6">
                 <h3 className="text-title-lg font-bold text-[#008080]">Classes 1 - 5</h3>
               </div>
               <ul className="space-y-4 text-left">
@@ -88,8 +87,7 @@ export default async function Home() {
 
             {/* Amber: Classes 6-8 */}
             <div className="glass-card border border-[#8b5a2b]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#8b5a2b]/[0.02] hover:bg-[#8b5a2b]/[0.05] group">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-3xl text-[#8b5a2b]">record_voice_over</span>
+              <div className="mb-6">
                 <h3 className="text-title-lg font-bold text-[#8b5a2b]">Classes 6 - 8</h3>
               </div>
               <ul className="space-y-4 text-left">
@@ -110,8 +108,7 @@ export default async function Home() {
 
             {/* Blue: Classes 9-12 */}
             <div className="glass-card border border-[#1e3f66]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#1e3f66]/[0.02] hover:bg-[#1e3f66]/[0.05] group">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-3xl text-[#1e3f66]">school</span>
+              <div className="mb-6">
                 <h3 className="text-title-lg font-bold text-[#1e3f66]">Classes 9 - 12</h3>
               </div>
               <ul className="space-y-4 text-left">
@@ -132,8 +129,7 @@ export default async function Home() {
 
             {/* Purple: School Level */}
             <div className="glass-card border border-[#6a1b9a]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#6a1b9a]/[0.02] hover:bg-[#6a1b9a]/[0.05] group">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-3xl text-[#6a1b9a]">domain</span>
+              <div className="mb-6">
                 <h3 className="text-title-lg font-bold text-[#6a1b9a]">School level</h3>
               </div>
               <ul className="space-y-4 text-left">
