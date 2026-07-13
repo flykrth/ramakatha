@@ -29,6 +29,131 @@ interface GuidelinesFormProps {
   hasRegisteredClassEvent: boolean
 }
 
+const FALLBACK_RULES: Record<string, string[]> = {
+  '809b0b42-f9dc-4683-9b98-bc1c83c27e31': [
+    'Open to students of Classes 6–8',
+    'Record a storytelling video',
+    'Language: Malayalam or English',
+    'Maximum duration: 5 minutes',
+    'Narrate an inspiring story from the Ramayana',
+    'Clear audio and video quality',
+    'Submit the video via email : amritaleap@gmail.com',
+    '🏆 Exciting Prizes Await!'
+  ],
+  'c5a528f1-8f5c-4ff6-9db4-386807ebc31a': [
+    'Open to students of Classes 6–8',
+    'Language: Malayalam or English',
+    'Perform a mono act based on Ramayana ',
+    'Maximum duration: 5 minutes',
+    'Costumes and minimal props may be used',
+    'Record the performance as a video',
+    'Submit the video via email : amritaleap@gmail.com ',
+    '🏆 Exciting Prizes Await!'
+  ],
+  'e2a4be59-df96-419b-a0f5-5d466986cf33': [
+    'Open to students of Classes 6–8',
+    'Theme: Lessons from the Ramayana',
+    'Maximum word limit: 1000 words',
+    'The essay must be original',
+    'Language: Malayalam or English',
+    'Register by scanning the QR code',
+    'Send the original essay by Post/Courier to:',
+    'Amrita LEAP',
+    'Amrita Vishwa Vidyapeetham',
+    'Amritapuri Campus',
+    'Clappana (P.O.)',
+    'Kollam, Kerala – 690525',
+    '🏆 Exciting Prizes Await!'
+  ],
+  'e10696ef-de35-430c-b26a-912c40c83a12': [
+    'Open to students of Classes 1–5',
+    'Dress up as any Ramayana character',
+    'Record a character portrayal (fancy dress) video',
+    'Maximum duration: 1 minutes',
+    'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
+    'Ensure clear audio and video quality',
+    'Submit the video via email: amritaleap@gmail.com',
+    '🏆 Exciting Prizes Await!'
+  ],
+  '7a8c430e-8fb1-432d-8ea2-36c1e30a51d8': [
+    'Open to students of Classes 1–5',
+    'Theme: My Favourite Character from the Ramayana',
+    'Create an original hand-drawn artwork',
+    'Medium: Pencil only (Graphite)',
+    'Mention the student\'s name, class, school name, and contact number on the back of the drawing sheet',
+    'Send the original artwork by post/courier to:',
+    'Amrita LEAP',
+    'Amrita Vishwa Vidyapeetham',
+    'Amritapuri Campus',
+    'Clappana (P.O.)',
+    'Kollam, Kerala – 690525',
+    '🏆 Exciting Prizes Await!'
+  ],
+  '07e4d8fb-df24-4286-90e9-b54db1ab9f1c': [
+    'Open to students of Classes 9–12',
+    'Theme: Hanuman Flying with the Sanjeevani Mountain',
+    'Create an original painting',
+    'Medium: Watercolours only',
+    'Mention the student\'s name, class, school name, and contact number on the back of the artwork',
+    'Send the original artwork by post/courier to:',
+    'Amrita LEAP',
+    'Amrita Vishwa Vidyapeetham',
+    'Amritapuri Campus',
+    'Clappana (P.O.)',
+    'Kollam, Kerala – 690525',
+    '🏆 Exciting Prizes Await!'
+  ],
+  '4b830d93-3d44-4861-a8cf-3c323f46f3ba': [
+    'Open to students of Classes 9–12',
+    'Record a video interview with a grandparent or any elderly person',
+    'Maximum duration: 10 minutes',
+    'The interview should focus on their memories, experiences, or lessons from the Ramayana',
+    'Ensure clear audio and video quality',
+    'Submit the video via email: amritaleap@gmail.com',
+    '🏆 Exciting Prizes Await!'
+  ],
+  '939029a1-8d2b-47e1-b46c-eb994191d8fc': [
+    'Open to students of Classes 9–12',
+    'Theme: Karkidaka Masam: The Traditions We Practice at Home and Their Significance',
+    'Write an original handwritten article based on the traditions observed in your home during Ramayana Month',
+    'Include the practices followed, their significance, and your personal reflections',
+    'Word limit: 800–1000 words',
+    'Mention the student\'s name, class, school name, and contact number on the article',
+    'Send the original handwritten article by post/courier to:',
+    'Amrita LEAP',
+    'Amrita Vishwa Vidyapeetham',
+    'Amritapuri Campus',
+    'Clappana (P.O.)',
+    'Kollam, Kerala – 690525',
+    '🏆 Exciting Prizes Await!'
+  ],
+  '63f0d061-e0e9-4e78-bc5a-e7be7dcf3a8d': [
+    'Open to High School students',
+    'One team per school',
+    'Team size: 8–10 participants',
+    'Duration: 20–30 minutes',
+    'Language: Malayalam, English, Hindi, or Sanskrit',
+    'Record the performance in a single standing wide shot (no cuts or edits)',
+    'Audio and lighting must be clear',
+    'Prompting is not permitted',
+    'Appropriate costumes, props, and stage background will be considered an added advantage',
+    'Digital/virtual backgrounds are not permitted',
+    'Submit the video via email: amritaleap@gmail.com',
+    '🏆 Exciting Prizes Await!'
+  ],
+  'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c': [
+    'Open to students of Classes 9–12.',
+    'Schools must register through the official registration form.',
+    'A Ramayana Study Booklet will be shared with all registered schools after the registration process is completed.',
+    'Interested students are encouraged to study the booklet thoroughly in preparation for the quiz.',
+    'An MCQ-based quiz along with the instructions for conducting it will be shared with the registered schools.',
+    'The quiz will be conducted at the respective schools.',
+    'Schools may evaluate the responses and identify students based on the prescribed cut-off marks or the highest scores.',
+    'The list of shortlisted students must be submitted to the organizers within the specified deadline.',
+    'Shortlisted students will be invited to attend a complimentary three-day residential Camp at Amrita Vishwa Vidyapeetham, Amritapuri Campus.'
+  ]
+}
+
 export default function GuidelinesForm({
   competition,
   isAlreadyRegistered,
@@ -43,12 +168,7 @@ export default function GuidelinesForm({
   const [regId, setRegId] = useState('')
 
   const guidelineData = competition.competition_guidelines?.[0]
-  const generalRules = guidelineData?.general_rules || [
-    'Participants must adhere to the official Ramayana theme.',
-    'Decisions of the evaluation panel are final and binding.',
-    'Late submissions or late entries will not be accepted.',
-    'Standard behavior codes must be maintained throughout the event.'
-  ]
+  const generalRules = guidelineData?.general_rules || FALLBACK_RULES[competition.id] || []
 
   // Registration block logic: Block if already registered OR if class-category limit reached
   const isClassCategoryEvent = !competition.is_school_wise
