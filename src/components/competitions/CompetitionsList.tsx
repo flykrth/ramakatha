@@ -113,7 +113,7 @@ export default function CompetitionsList({
                           <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
                             calendar_today
                           </span>
-                          Jul 30, 2026
+                          Closes Aug 16, 2026
                         </div>
                         {comp.max_team_size > 1 && (
                           <div className="flex items-center gap-1.5 text-label-sm font-label-sm text-on-surface-variant">

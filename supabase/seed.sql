@@ -6,7 +6,7 @@ truncate public.competition_guidelines cascade;
 truncate public.competitions cascade;
 delete from auth.users;
 
--- Insert Competitions
+-- Insert Competitions (All registration deadlines closed on August 16, 2026)
 insert into public.competitions (id, title, description, category, event_date, venue, duration, age_group, eligible_classes, max_team_size, is_school_wise, status)
 values
   -- Class 6-8 Competitions
@@ -15,7 +15,7 @@ values
     'Storytelling Competition',
     'Share an inspiring story from the Ramayana through an engaging video presentation.',
     'Literature',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Video Submission',
     'Max 5 Minutes',
     'Class 6-8',
@@ -29,7 +29,7 @@ values
     'Mono Act Competition',
     'Bring to life any character, episode, or inspiring moment from the Ramayana through a powerful mono act that showcases expression, creativity, and stage presence.',
     'Dance',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Video Submission',
     'Max 5 minutes',
     'Class 6-8',
@@ -43,7 +43,7 @@ values
     'Essay Writing Competition',
     'Express your thoughts on the timeless values and life lessons imparted by the Ramayana through an original essay.',
     'Literature',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Postal Submission',
     'Max 1000 words',
     'Class 6-8',
@@ -58,7 +58,7 @@ values
     'Ramayana Character Portrayal Competition',
     'Transform into your favourite character from the Ramayana and present yourself through a simple video. Showcase the character''s costume, appearance, and confidence while celebrating the rich cultural heritage of the epic.',
     'Fine Arts',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Video Submission',
     'Maximum duration: 1 minutes',
     'Class 1-5',
@@ -72,7 +72,7 @@ values
     'Drawing Competition',
     'Express your creativity by drawing your favourite character from the Ramayana.',
     'Fine Arts',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Postal Submission',
     'Original Sketch',
     'Class 1-5',
@@ -87,7 +87,7 @@ values
     'Painting Competition',
     'Capture the inspiring moment when Lord Hanuman carries the Sanjeevani Mountain to save Lakshmana. Express this iconic episode from the Ramayana through your artistic creativity, highlighting Hanuman''s devotion, courage, and selfless service.',
     'Fine Arts',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Postal Submission',
     'Original Canvas',
     'Class 9-12',
@@ -101,7 +101,7 @@ values
     'Elder Wisdom Interview',
     'Connect with the wisdom of the older generation by interviewing a grandparent or elderly person about their memories, experiences, and life lessons inspired by the Ramayana.',
     'Literature',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Video Submission',
     'Max 10 minutes',
     'Class 9-12',
@@ -115,7 +115,7 @@ values
     'Article Writing Competition',
     'Explore the unique traditions observed in your home during Karkidaka Masam (Ramayana Month). Write about the customs your family follows, why they are practiced, and the values they impart. Share your family''s experience of preserving these traditions across generations.',
     'Literature',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Postal Submission',
     '800-1000 words',
     'Class 9-12',
@@ -130,7 +130,7 @@ values
     'Drama Competition',
     'Present a dramatic performance based on episodes from Aaranya Kaandam, showcasing creativity, teamwork, and the values of the Ramayana.',
     'Dance',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'Video Submission',
     '20-30 minutes',
     'Classes 9 - 12 (School-wise)',
@@ -144,7 +144,7 @@ values
     'Ramayana Quiz',
     'Explore the timeless wisdom of the Ramayana through a structured quiz designed to inspire learning, reflection, and deeper understanding of the epic.',
     'Literature',
-    '2026-07-30 23:59:59+05:30',
+    '2026-08-16 23:59:59+05:30',
     'School Wise',
     'Booklet Based',
     'Classes 9-12 (School-wise)',
@@ -168,8 +168,7 @@ values
       'Maximum duration: 5 minutes',
       'Narrate an inspiring story from the Ramayana',
       'Clear audio and video quality',
-      'Submit the video via email : amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await!'
+      'Submit the video via email : amritaleap@gmail.com'
     ],
     '[
       {"criteria": "Story Content and Structure", "max_points": 40},
@@ -188,8 +187,7 @@ values
       'Maximum duration: 5 minutes',
       'Costumes and minimal props may be used',
       'Record the performance as a video',
-      'Submit the video via email : amritaleap@gmail.com ',
-      '🏆 Exciting Prizes Await!'
+      'Submit the video via email : amritaleap@gmail.com '
     ],
     '[
       {"criteria": "Expression & Dramatic Impact", "max_points": 40},
@@ -213,8 +211,7 @@ Amrita LEAP
 Amrita Vishwa Vidyapeetham
 Amritapuri Campus
 Clappana (P.O.)
-Kollam, Kerala – 690525',
-      '🏆 Exciting Prizes Await!'
+Kollam, Kerala – 690525'
     ],
     '[
       {"criteria": "Adherence to Theme & Lessons", "max_points": 40},
@@ -233,8 +230,7 @@ Kollam, Kerala – 690525',
       'Maximum duration: 1 minutes',
       'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
       'Ensure clear audio and video quality',
-      'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await!'
+      'Submit the video via email: amritaleap@gmail.com'
     ],
     '[
       {"criteria": "Costume Authenticity & Representation", "max_points": 50},
@@ -257,8 +253,7 @@ Amrita LEAP
 Amrita Vishwa Vidyapeetham
 Amritapuri Campus
 Clappana (P.O.)
-Kollam, Kerala – 690525',
-      '🏆 Exciting Prizes Await!'
+Kollam, Kerala – 690525'
     ],
     '[
       {"criteria": "Creativity & Imagination", "max_points": 40},
@@ -281,8 +276,7 @@ Amrita LEAP
 Amrita Vishwa Vidyapeetham
 Amritapuri Campus
 Clappana (P.O.)
-Kollam, Kerala – 690525',
-      '🏆 Exciting Prizes Await!'
+Kollam, Kerala – 690525'
     ],
     '[
       {"criteria": "Artistic Technique & Composition", "max_points": 40},
@@ -300,8 +294,7 @@ Kollam, Kerala – 690525',
       'Maximum duration: 10 minutes',
       'The interview should focus on their memories, experiences, or lessons from the Ramayana',
       'Ensure clear audio and video quality',
-      'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await!'
+      'Submit the video via email: amritaleap@gmail.com'
     ],
     '[
       {"criteria": "Interview Depth & Interaction Flow", "max_points": 40},
@@ -325,8 +318,7 @@ Amrita LEAP
 Amrita Vishwa Vidyapeetham
 Amritapuri Campus
 Clappana (P.O.)
-Kollam, Kerala – 690525',
-      '🏆 Exciting Prizes Await!'
+Kollam, Kerala – 690525'
     ],
     '[
       {"criteria": "Significance of Traditions & Reflections", "max_points": 40},
@@ -349,8 +341,7 @@ Kollam, Kerala – 690525',
       'Prompting is not permitted',
       'Appropriate costumes, props, and stage background will be considered an added advantage',
       'Digital/virtual backgrounds are not permitted',
-      'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await!'
+      'Submit the video via email: amritaleap@gmail.com'
     ],
     '[
       {"criteria": "Acting Skill, Coordination & Synchronization", "max_points": 35},

@@ -146,7 +146,7 @@ export default function DashboardContent({
                       </h4>
                       <p className="text-body-md font-body-md text-on-surface-variant flex items-center gap-2">
                         <span className="material-symbols-outlined text-sm">calendar_month</span>
-                        Deadline: July 30, 2026
+                        Submission deadline: August 31, 2026
                       </p>
                       <p className="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
                         <span className="material-symbols-outlined text-sm">explore</span>

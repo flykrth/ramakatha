@@ -37,8 +37,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 5 minutes',
     'Narrate an inspiring story from the Ramayana',
     'Clear audio and video quality',
-    'Submit the video via email : amritaleap@gmail.com',
-    '🏆 Exciting Prizes Await!'
+    'Submit the video via email : amritaleap@gmail.com'
   ],
   'c5a528f1-8f5c-4ff6-9db4-386807ebc31a': [
     'Open to students of Classes 6–8',
@@ -47,8 +46,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 5 minutes',
     'Costumes and minimal props may be used',
     'Record the performance as a video',
-    'Submit the video via email : amritaleap@gmail.com ',
-    '🏆 Exciting Prizes Await!'
+    'Submit the video via email : amritaleap@gmail.com '
   ],
   'e2a4be59-df96-419b-a0f5-5d466986cf33': [
     'Open to students of Classes 6–8',
@@ -57,8 +55,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'The essay must be original',
     'Language: Malayalam or English',
     'Register by scanning the QR code',
-    'Send the original essay by Post/Courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
-    '🏆 Exciting Prizes Await!'
+    'Send the original essay by Post/Courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525'
   ],
   'e10696ef-de35-430c-b26a-912c40c83a12': [
     'Open to students of Classes 1–5',
@@ -67,8 +64,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 1 minutes',
     'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
     'Ensure clear audio and video quality',
-    'Submit the video via email: amritaleap@gmail.com',
-    '🏆 Exciting Prizes Await!'
+    'Submit the video via email: amritaleap@gmail.com'
   ],
   '7a8c430e-8fb1-432d-8ea2-36c1e30a51d8': [
     'Open to students of Classes 1–5',
@@ -76,8 +72,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Create an original hand-drawn artwork',
     'Medium: Pencil only (Graphite)',
     'Mention the student\'s name, class, school name, and contact number on the back of the drawing sheet',
-    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
-    '🏆 Exciting Prizes Await!'
+    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525'
   ],
   '07e4d8fb-df24-4286-90e9-b54db1ab9f1c': [
     'Open to students of Classes 9–12',
@@ -85,8 +80,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Create an original painting',
     'Medium: Watercolours only',
     'Mention the student\'s name, class, school name, and contact number on the back of the artwork',
-    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
-    '🏆 Exciting Prizes Await!'
+    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525'
   ],
   '4b830d93-3d44-4861-a8cf-3c323f46f3ba': [
     'Open to students of Classes 9–12',
@@ -94,8 +88,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 10 minutes',
     'The interview should focus on their memories, experiences, or lessons from the Ramayana',
     'Ensure clear audio and video quality',
-    'Submit the video via email: amritaleap@gmail.com',
-    '🏆 Exciting Prizes Await!'
+    'Submit the video via email: amritaleap@gmail.com'
   ],
   '939029a1-8d2b-47e1-b46c-eb994191d8fc': [
     'Open to students of Classes 9–12',
@@ -104,8 +97,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Include the practices followed, their significance, and your personal reflections',
     'Word limit: 800–1000 words',
     'Mention the student\'s name, class, school name, and contact number on the article',
-    'Send the original handwritten article by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
-    '🏆 Exciting Prizes Await!'
+    'Send the original handwritten article by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525'
   ],
   '63f0d061-e0e9-4e78-bc5a-e7be7dcf3a8d': [
     'Open to High School students',
@@ -118,8 +110,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Prompting is not permitted',
     'Appropriate costumes, props, and stage background will be considered an added advantage',
     'Digital/virtual backgrounds are not permitted',
-    'Submit the video via email: amritaleap@gmail.com',
-    '🏆 Exciting Prizes Await!'
+    'Submit the video via email: amritaleap@gmail.com'
   ],
   'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c': [
     'Open to students of Classes 9–12.',
@@ -267,9 +258,15 @@ export default function GuidelinesForm({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
             <div className="flex flex-col gap-1">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
-                Deadline
+                Last date to register
               </span>
-              <span className="text-body-md font-body-md text-on-surface">July 30, 2026</span>
+              <span className="text-body-md font-body-md text-on-surface">August 16, 2026</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
+                Last date to submit
+              </span>
+              <span className="text-body-md font-body-md text-on-surface">August 31, 2026</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Mode of submission</span>
@@ -330,7 +327,7 @@ export default function GuidelinesForm({
                 </>
               )}
             </div>
-            <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: July 30, 2026</p>
+            <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: August 16, 2026</p>
           </div>
 
           {/* Validation Feedback Warning Banners */}
