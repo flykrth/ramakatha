@@ -31,7 +31,7 @@ values
     'Dance',
     '2026-07-30 23:59:59+05:30',
     'Video Submission',
-    'Max 5 Minutes',
+    'Max 5 minutes',
     'Class 6-8',
     array['6', '7', '8'],
     1,
@@ -60,7 +60,7 @@ values
     'Fine Arts',
     '2026-07-30 23:59:59+05:30',
     'Video Submission',
-    'Max 2 Minutes',
+    'Maximum duration: 1 minutes',
     'Class 1-5',
     array['1', '2', '3', '4', '5'],
     1,
@@ -70,7 +70,7 @@ values
   (
     '7a8c430e-8fb1-432d-8ea2-36c1e30a51d8',
     'Drawing Competition',
-    'Express your creativity by drawing your favourite character from the Ramayana. Use colours and imagination to bring the character to life while celebrating the values and inspiration of the epic.',
+    'Express your creativity by drawing your favourite character from the Ramayana.',
     'Fine Arts',
     '2026-07-30 23:59:59+05:30',
     'Postal Submission',
@@ -103,7 +103,7 @@ values
     'Literature',
     '2026-07-30 23:59:59+05:30',
     'Video Submission',
-    'Max 10 Minutes',
+    'Max 10 minutes',
     'Class 9-12',
     array['9', '10', '11', '12'],
     1,
@@ -133,22 +133,22 @@ values
     '2026-07-30 23:59:59+05:30',
     'Video Submission',
     '20-30 minutes',
-    'High School Students (School-wise)',
-    array['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    'Classes 9 - 12 (School-wise)',
+    array['9', '10', '11', '12'],
     10,
     true,
     'open'
   ),
   (
     'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c',
-    'Quiz Competition',
-    'Solve quiz questions based on the Ramayana. School wise booklet competition.',
+    'Ramayana Quiz',
+    'Explore the timeless wisdom of the Ramayana through a structured quiz designed to inspire learning, reflection, and deeper understanding of the epic.',
     'Literature',
     '2026-07-30 23:59:59+05:30',
     'School Wise',
     'Booklet Based',
-    'School-wise Category',
-    array['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    'Classes 9-12 (School-wise)',
+    array['9', '10', '11', '12'],
     1,
     true,
     'open'
@@ -162,14 +162,14 @@ values
     '702652b0-8c29-450f-90e0-2647c231ff61',
     '809b0b42-f9dc-4683-9b98-bc1c83c27e31',
     array[
-      'Open to students of Classes 6-8',
+      'Open to students of Classes 6–8',
       'Record a storytelling video',
       'Language: Malayalam or English',
       'Maximum duration: 5 minutes',
       'Narrate an inspiring story from the Ramayana',
-      'Ensure clear audio and video quality',
-      'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Clear audio and video quality',
+      'Submit the video via email : amritaleap@gmail.com',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Story Content and Structure", "max_points": 40},
@@ -182,15 +182,14 @@ values
     '5e89d10e-a579-4d2c-87d2-7fb2a1d2e6b2',
     'c5a528f1-8f5c-4ff6-9db4-386807ebc31a',
     array[
-      'Open to students of Classes 6-8',
-      'Theme: Ramayana',
+      'Open to students of Classes 6–8',
       'Language: Malayalam or English',
-      'Perform a mono act based on Ramayana',
+      'Perform a mono act based on Ramayana ',
       'Maximum duration: 5 minutes',
       'Costumes and minimal props may be used',
       'Record the performance as a video',
-      'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Submit the video via email : amritaleap@gmail.com ',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Expression & Dramatic Impact", "max_points": 40},
@@ -203,13 +202,19 @@ values
     '1df092b3-e283-4a17-b7e1-88cd3b3a39e7',
     'e2a4be59-df96-419b-a0f5-5d466986cf33',
     array[
-      'Open to students of Classes 6-8',
+      'Open to students of Classes 6–8',
       'Theme: Lessons from the Ramayana',
       'Maximum word limit: 1000 words',
       'The essay must be original',
       'Language: Malayalam or English',
-      'Send the original essay by Post/Courier to: Amrita LEAP, Amrita Vishwa Vidyapeetham, Amritapuri Campus, Clappana (P.O.), Kollam, Kerala - 690525',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Register by scanning the QR code',
+      'Send the original essay by Post/Courier to:',
+      'Amrita LEAP',
+      'Amrita Vishwa Vidyapeetham',
+      'Amritapuri Campus',
+      'Clappana (P.O.)',
+      'Kollam, Kerala – 690525',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Adherence to Theme & Lessons", "max_points": 40},
@@ -222,14 +227,14 @@ values
     '4f29a02d-de7c-473d-9d41-ee7c30a5bb1d',
     'e10696ef-de35-430c-b26a-912c40c83a12',
     array[
-      'Open to students of Classes 1-5',
-      'Theme: Dress Up as Your Favourite Ramayana Character',
+      'Open to students of Classes 1–5',
+      'Dress up as any Ramayana character',
       'Record a character portrayal (fancy dress) video',
-      'Maximum duration: 2 minutes',
+      'Maximum duration: 1 minutes',
       'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
       'Ensure clear audio and video quality',
       'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Costume Authenticity & Representation", "max_points": 50},
@@ -242,13 +247,18 @@ values
     'f9db2a19-86cd-4d8e-90fe-002d3fbe2e9d',
     '7a8c430e-8fb1-432d-8ea2-36c1e30a51d8',
     array[
-      'Open to students of Classes 1-5',
+      'Open to students of Classes 1–5',
       'Theme: My Favourite Character from the Ramayana',
       'Create an original hand-drawn artwork',
       'Medium: Pencil only (Graphite)',
       'Mention the student''s name, class, school name, and contact number on the back of the drawing sheet',
-      'Send the original artwork by post/courier to: Amrita LEAP, Amrita Vishwa Vidyapeetham, Amritapuri Campus, Clappana (P.O.), Kollam, Kerala - 690525',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Send the original artwork by post/courier to:',
+      'Amrita LEAP',
+      'Amrita Vishwa Vidyapeetham',
+      'Amritapuri Campus',
+      'Clappana (P.O.)',
+      'Kollam, Kerala – 690525',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Creativity & Imagination", "max_points": 40},
@@ -261,13 +271,18 @@ values
     'd3920c8e-bf92-4876-8090-de23fc01be8c',
     '07e4d8fb-df24-4286-90e9-b54db1ab9f1c',
     array[
-      'Open to students of Classes 9-12',
+      'Open to students of Classes 9–12',
       'Theme: Hanuman Flying with the Sanjeevani Mountain',
       'Create an original painting',
       'Medium: Watercolours only',
       'Mention the student''s name, class, school name, and contact number on the back of the artwork',
-      'Send the original artwork by post/courier to: Amrita LEAP, Amrita Vishwa Vidyapeetham, Amritapuri Campus, Clappana (P.O.), Kollam, Kerala - 690525',
-      '🏆 Exciting Prizes Await! 📜 Participation Certificate for All Eligible Participants.'
+      'Send the original artwork by post/courier to:',
+      'Amrita LEAP',
+      'Amrita Vishwa Vidyapeetham',
+      'Amritapuri Campus',
+      'Clappana (P.O.)',
+      'Kollam, Kerala – 690525',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Artistic Technique & Composition", "max_points": 40},
@@ -280,14 +295,13 @@ values
     'ca8a7b92-edc2-498c-85a2-0ea2bcda3be8',
     '4b830d93-3d44-4861-a8cf-3c323f46f3ba',
     array[
-      'Open to students of Classes 9-12',
-      'Theme: Sharing Ramayana Memories',
+      'Open to students of Classes 9–12',
       'Record a video interview with a grandparent or any elderly person',
       'Maximum duration: 10 minutes',
-      'The interview should focus on their memories, experiences, and life lessons inspired by the Ramayana',
+      'The interview should focus on their memories, experiences, or lessons from the Ramayana',
       'Ensure clear audio and video quality',
       'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Interview Depth & Interaction Flow", "max_points": 40},
@@ -300,14 +314,19 @@ values
     'fa908d19-cde2-45e0-9ef2-8ba3fc20be8b',
     '939029a1-8d2b-47e1-b46c-eb994191d8fc',
     array[
-      'Open to students of Classes 9-12',
+      'Open to students of Classes 9–12',
       'Theme: Karkidaka Masam: The Traditions We Practice at Home and Their Significance',
       'Write an original handwritten article based on the traditions observed in your home during Ramayana Month',
       'Include the practices followed, their significance, and your personal reflections',
-      'Word limit: 800-1000 words',
+      'Word limit: 800–1000 words',
       'Mention the student''s name, class, school name, and contact number on the article',
-      'Send the original handwritten article by post/courier to: Amrita LEAP, Amrita Vishwa Vidyapeetham, Amritapuri Campus, Clappana (P.O.), Kollam, Kerala - 690525',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Send the original handwritten article by post/courier to:',
+      'Amrita LEAP',
+      'Amrita Vishwa Vidyapeetham',
+      'Amritapuri Campus',
+      'Clappana (P.O.)',
+      'Kollam, Kerala – 690525',
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Significance of Traditions & Reflections", "max_points": 40},
@@ -321,14 +340,17 @@ values
     '63f0d061-e0e9-4e78-bc5a-e7be7dcf3a8d',
     array[
       'Open to High School students',
-      'One team per school. Team size: 8-10 participants',
-      'Duration: 20-30 minutes',
+      'One team per school',
+      'Team size: 8–10 participants',
+      'Duration: 20–30 minutes',
       'Language: Malayalam, English, Hindi, or Sanskrit',
       'Record the performance in a single standing wide shot (no cuts or edits)',
-      'Audio and lighting must be clear. Prompting is not permitted.',
-      'Appropriate costumes, props, and stage background will be considered an added advantage. Digital/virtual backgrounds are not permitted.',
+      'Audio and lighting must be clear',
+      'Prompting is not permitted',
+      'Appropriate costumes, props, and stage background will be considered an added advantage',
+      'Digital/virtual backgrounds are not permitted',
       'Submit the video via email: amritaleap@gmail.com',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      '🏆 Exciting Prizes Await!'
     ],
     '[
       {"criteria": "Acting Skill, Coordination & Synchronization", "max_points": 35},
@@ -341,11 +363,15 @@ values
     'bc29801e-cd2d-45f8-809e-be2da10cb9ec',
     'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c',
     array[
-      'School Wise Competition',
-      'Quiz questions will be solved based on the Ramayana via a booklets assessment.',
-      'One booklet will be provided per school.',
-      'All answers must be handwritten and original.',
-      '🏆 Exciting Prizes Await! Participation Certificate for All Eligible Participants.'
+      'Open to students of Classes 9–12.',
+      'Schools must register through the official registration form.',
+      'A Ramayana Study Booklet will be shared with all registered schools after the registration process is completed.',
+      'Interested students are encouraged to study the booklet thoroughly in preparation for the quiz.',
+      'An MCQ-based quiz along with the instructions for conducting it will be shared with the registered schools.',
+      'The quiz will be conducted at the respective schools.',
+      'Schools may evaluate the responses and identify students based on the prescribed cut-off marks or the highest scores.',
+      'The list of shortlisted students must be submitted to the organizers within the specified deadline.',
+      'Shortlisted students will be invited to attend a complimentary three-day residential Camp at Amrita Vishwa Vidyapeetham, Amritapuri Campus.'
     ],
     '[
       {"criteria": "Quiz Accuracy & Correct Answers Score", "max_points": 100}
