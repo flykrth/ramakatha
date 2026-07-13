@@ -114,14 +114,16 @@ const FALLBACK_RULES: Record<string, string[]> = {
   ],
   'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c': [
     'Open to students of Classes 9–12.',
+    'One team per school will qualify for the final stage.',
+    'Team size: 2 participants.',
     'Schools must register through the official registration form.',
     'A Ramayana Study Booklet will be shared with all registered schools after the registration process is completed.',
     'Interested students are encouraged to study the booklet thoroughly in preparation for the quiz.',
-    'An MCQ-based quiz along with the instructions for conducting it will be shared with the registered schools.',
-    'The quiz will be conducted at the respective schools.',
-    'Schools may evaluate the responses and identify students based on the prescribed cut-off marks or the highest scores.',
-    'The list of shortlisted students must be submitted to the organizers within the specified deadline.',
-    'Shortlisted students will be invited to attend a complimentary three-day residential Camp at Amrita Vishwa Vidyapeetham, Amritapuri Campus.'
+    'A multiple-choice quiz along with the instructions for conducting it will be shared with the registered schools.',
+    'The quiz shall be conducted by the respective schools.',
+    'Based on the quiz results, each school shall nominate one winning team (2 participants) to represent the school.',
+    'The details of the selected team must be submitted to the organizers on or before 31 August 2026 via mail: amritaleap@gmail.com',
+    'The selected team will be invited to attend a complimentary free three-day residential Camp at Amrita Vishwa Vidyapeetham, Amritapuri Campus.'
   ]
 }
 
