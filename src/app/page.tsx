@@ -69,103 +69,83 @@ export default async function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Teal: Classes 1-5 */}
-            <div className="glass-card border border-[#008080]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#008080]/[0.02] flex flex-col justify-between hover:bg-[#008080]/[0.05] group">
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-3xl text-[#008080]">child_care</span>
-                  <h3 className="text-title-lg font-bold text-[#008080]">Classes 1 - 5</h3>
-                </div>
-                <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#008080] mt-0.5 group-hover:scale-110 transition-transform">face</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Ramayana character portrayal</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#008080] mt-0.5 group-hover:scale-110 transition-transform">brush</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Drawing competition</span>
-                  </li>
-                </ul>
+            <div className="glass-card border border-[#008080]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#008080]/[0.02] hover:bg-[#008080]/[0.05] group">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-3xl text-[#008080]">child_care</span>
+                <h3 className="text-title-lg font-bold text-[#008080]">Classes 1 - 5</h3>
               </div>
-              <div className="mt-8 text-label-sm font-semibold text-[#008080] tracking-wider uppercase text-left">
-                Primary division
-              </div>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#008080] mt-0.5 group-hover:scale-110 transition-transform">face</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Ramayana character portrayal</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#008080] mt-0.5 group-hover:scale-110 transition-transform">brush</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Drawing competition</span>
+                </li>
+              </ul>
             </div>
 
             {/* Amber: Classes 6-8 */}
-            <div className="glass-card border border-[#8b5a2b]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#8b5a2b]/[0.02] flex flex-col justify-between hover:bg-[#8b5a2b]/[0.05] group">
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-3xl text-[#8b5a2b]">record_voice_over</span>
-                  <h3 className="text-title-lg font-bold text-[#8b5a2b]">Classes 6 - 8</h3>
-                </div>
-                <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">auto_stories</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Storytelling</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">theater_comedy</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Mono act</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">history_edu</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Essay writing</span>
-                  </li>
-                </ul>
+            <div className="glass-card border border-[#8b5a2b]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#8b5a2b]/[0.02] hover:bg-[#8b5a2b]/[0.05] group">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-3xl text-[#8b5a2b]">record_voice_over</span>
+                <h3 className="text-title-lg font-bold text-[#8b5a2b]">Classes 6 - 8</h3>
               </div>
-              <div className="mt-8 text-label-sm font-semibold text-[#8b5a2b] tracking-wider uppercase text-left">
-                Middle division
-              </div>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">auto_stories</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Storytelling</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">theater_comedy</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Mono act</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#8b5a2b] mt-0.5 group-hover:scale-110 transition-transform">history_edu</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Essay writing</span>
+                </li>
+              </ul>
             </div>
 
             {/* Blue: Classes 9-12 */}
-            <div className="glass-card border border-[#1e3f66]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#1e3f66]/[0.02] flex flex-col justify-between hover:bg-[#1e3f66]/[0.05] group">
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-3xl text-[#1e3f66]">school</span>
-                  <h3 className="text-title-lg font-bold text-[#1e3f66]">Classes 9 - 12</h3>
-                </div>
-                <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">palette</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Painting</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">volunteer_activism</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Elder wisdom interview</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">edit_document</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Article writing</span>
-                  </li>
-                </ul>
+            <div className="glass-card border border-[#1e3f66]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#1e3f66]/[0.02] hover:bg-[#1e3f66]/[0.05] group">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-3xl text-[#1e3f66]">school</span>
+                <h3 className="text-title-lg font-bold text-[#1e3f66]">Classes 9 - 12</h3>
               </div>
-              <div className="mt-8 text-label-sm font-semibold text-[#1e3f66] tracking-wider uppercase text-left">
-                Secondary division
-              </div>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">palette</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Painting</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">volunteer_activism</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Elder wisdom interview</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#1e3f66] mt-0.5 group-hover:scale-110 transition-transform">edit_document</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Article writing</span>
+                </li>
+              </ul>
             </div>
 
             {/* Purple: School Level */}
-            <div className="glass-card border border-[#6a1b9a]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#6a1b9a]/[0.02] flex flex-col justify-between hover:bg-[#6a1b9a]/[0.05] group">
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-3xl text-[#6a1b9a]">domain</span>
-                  <h3 className="text-title-lg font-bold text-[#6a1b9a]">School level</h3>
-                </div>
-                <ul className="space-y-4 text-left">
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#6a1b9a] mt-0.5 group-hover:scale-110 transition-transform">quiz</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Ramayana quiz</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="material-symbols-outlined text-lg text-[#6a1b9a] mt-0.5 group-hover:scale-110 transition-transform">groups</span>
-                    <span className="text-body-md text-on-surface-variant font-medium">Drama competition</span>
-                  </li>
-                </ul>
+            <div className="glass-card border border-[#6a1b9a]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#6a1b9a]/[0.02] hover:bg-[#6a1b9a]/[0.05] group">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="material-symbols-outlined text-3xl text-[#6a1b9a]">domain</span>
+                <h3 className="text-title-lg font-bold text-[#6a1b9a]">School level</h3>
               </div>
-              <div className="mt-8 text-label-sm font-semibold text-[#6a1b9a] tracking-wider uppercase text-left">
-                Institutional division
-              </div>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#6a1b9a] mt-0.5 group-hover:scale-110 transition-transform">quiz</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Ramayana quiz</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-lg text-[#6a1b9a] mt-0.5 group-hover:scale-110 transition-transform">groups</span>
+                  <span className="text-body-md text-on-surface-variant font-medium">Drama competition</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
