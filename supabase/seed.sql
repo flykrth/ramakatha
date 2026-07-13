@@ -168,7 +168,7 @@ values
       'Maximum duration: 5 minutes',
       'Narrate an inspiring story from the Ramayana',
       'Clear audio and video quality',
-      'Submit the video via email : amritaleap@gmail.com'
+      'Submit the video via email : amritaleap@gmail.com with subject as "Ramakatha 2026 Storytelling Competition submission"'
     ],
     '[
       {"criteria": "Story Content and Structure", "max_points": 40},
@@ -187,7 +187,7 @@ values
       'Maximum duration: 5 minutes',
       'Costumes and minimal props may be used',
       'Record the performance as a video',
-      'Submit the video via email : amritaleap@gmail.com '
+      'Submit the video via email : amritaleap@gmail.com with subject as "Ramakatha 2026 Mono Act Competition submission"'
     ],
     '[
       {"criteria": "Expression & Dramatic Impact", "max_points": 40},
@@ -230,7 +230,7 @@ Kollam, Kerala – 690525'
       'Maximum duration: 1 minutes',
       'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
       'Ensure clear audio and video quality',
-      'Submit the video via email: amritaleap@gmail.com'
+      'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Ramayana Character Portrayal Competition submission"'
     ],
     '[
       {"criteria": "Costume Authenticity & Representation", "max_points": 50},
@@ -294,7 +294,7 @@ Kollam, Kerala – 690525'
       'Maximum duration: 10 minutes',
       'The interview should focus on their memories, experiences, or lessons from the Ramayana',
       'Ensure clear audio and video quality',
-      'Submit the video via email: amritaleap@gmail.com'
+      'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Elder Wisdom Interview submission"'
     ],
     '[
       {"criteria": "Interview Depth & Interaction Flow", "max_points": 40},
@@ -341,7 +341,7 @@ Kollam, Kerala – 690525'
       'Prompting is not permitted',
       'Appropriate costumes, props, and stage background will be considered an added advantage',
       'Digital/virtual backgrounds are not permitted',
-      'Submit the video via email: amritaleap@gmail.com'
+      'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Drama Competition submission"'
     ],
     '[
       {"criteria": "Acting Skill, Coordination & Synchronization", "max_points": 35},

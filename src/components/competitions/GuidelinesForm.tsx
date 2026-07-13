@@ -37,7 +37,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 5 minutes',
     'Narrate an inspiring story from the Ramayana',
     'Clear audio and video quality',
-    'Submit the video via email : amritaleap@gmail.com'
+    'Submit the video via email : amritaleap@gmail.com with subject as "Ramakatha 2026 Storytelling Competition submission"'
   ],
   'c5a528f1-8f5c-4ff6-9db4-386807ebc31a': [
     'Open to students of Classes 6–8',
@@ -46,7 +46,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 5 minutes',
     'Costumes and minimal props may be used',
     'Record the performance as a video',
-    'Submit the video via email : amritaleap@gmail.com '
+    'Submit the video via email : amritaleap@gmail.com with subject as "Ramakatha 2026 Mono Act Competition submission"'
   ],
   'e2a4be59-df96-419b-a0f5-5d466986cf33': [
     'Open to students of Classes 6–8',
@@ -64,7 +64,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 1 minutes',
     'No dialogue or performance is required. Simply showcase the costume by standing, walking, or posing as the chosen character.',
     'Ensure clear audio and video quality',
-    'Submit the video via email: amritaleap@gmail.com'
+    'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Ramayana Character Portrayal Competition submission"'
   ],
   '7a8c430e-8fb1-432d-8ea2-36c1e30a51d8': [
     'Open to students of Classes 1–5',
@@ -88,7 +88,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Maximum duration: 10 minutes',
     'The interview should focus on their memories, experiences, or lessons from the Ramayana',
     'Ensure clear audio and video quality',
-    'Submit the video via email: amritaleap@gmail.com'
+    'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Elder Wisdom Interview submission"'
   ],
   '939029a1-8d2b-47e1-b46c-eb994191d8fc': [
     'Open to students of Classes 9–12',
@@ -110,7 +110,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Prompting is not permitted',
     'Appropriate costumes, props, and stage background will be considered an added advantage',
     'Digital/virtual backgrounds are not permitted',
-    'Submit the video via email: amritaleap@gmail.com'
+    'Submit the video via email: amritaleap@gmail.com with subject as "Ramakatha 2026 Drama Competition submission"'
   ],
   'bf8e390c-df2e-4b2a-a70d-f2eb89cf1a7c': [
     'Open to students of Classes 9–12.',
