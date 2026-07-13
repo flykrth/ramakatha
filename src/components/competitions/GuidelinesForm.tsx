@@ -57,12 +57,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'The essay must be original',
     'Language: Malayalam or English',
     'Register by scanning the QR code',
-    'Send the original essay by Post/Courier to:',
-    'Amrita LEAP',
-    'Amrita Vishwa Vidyapeetham',
-    'Amritapuri Campus',
-    'Clappana (P.O.)',
-    'Kollam, Kerala – 690525',
+    'Send the original essay by Post/Courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
     '🏆 Exciting Prizes Await!'
   ],
   'e10696ef-de35-430c-b26a-912c40c83a12': [
@@ -81,12 +76,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Create an original hand-drawn artwork',
     'Medium: Pencil only (Graphite)',
     'Mention the student\'s name, class, school name, and contact number on the back of the drawing sheet',
-    'Send the original artwork by post/courier to:',
-    'Amrita LEAP',
-    'Amrita Vishwa Vidyapeetham',
-    'Amritapuri Campus',
-    'Clappana (P.O.)',
-    'Kollam, Kerala – 690525',
+    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
     '🏆 Exciting Prizes Await!'
   ],
   '07e4d8fb-df24-4286-90e9-b54db1ab9f1c': [
@@ -95,12 +85,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Create an original painting',
     'Medium: Watercolours only',
     'Mention the student\'s name, class, school name, and contact number on the back of the artwork',
-    'Send the original artwork by post/courier to:',
-    'Amrita LEAP',
-    'Amrita Vishwa Vidyapeetham',
-    'Amritapuri Campus',
-    'Clappana (P.O.)',
-    'Kollam, Kerala – 690525',
+    'Send the original artwork by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
     '🏆 Exciting Prizes Await!'
   ],
   '4b830d93-3d44-4861-a8cf-3c323f46f3ba': [
@@ -119,12 +104,7 @@ const FALLBACK_RULES: Record<string, string[]> = {
     'Include the practices followed, their significance, and your personal reflections',
     'Word limit: 800–1000 words',
     'Mention the student\'s name, class, school name, and contact number on the article',
-    'Send the original handwritten article by post/courier to:',
-    'Amrita LEAP',
-    'Amrita Vishwa Vidyapeetham',
-    'Amritapuri Campus',
-    'Clappana (P.O.)',
-    'Kollam, Kerala – 690525',
+    'Send the original handwritten article by post/courier to:\nAmrita LEAP\nAmrita Vishwa Vidyapeetham\nAmritapuri Campus\nClappana (P.O.)\nKollam, Kerala – 690525',
     '🏆 Exciting Prizes Await!'
   ],
   '63f0d061-e0e9-4e78-bc5a-e7be7dcf3a8d': [
@@ -316,7 +296,7 @@ export default function GuidelinesForm({
                 <span className="material-symbols-outlined text-secondary mt-1" style={{ fontSize: '20px' }}>
                   check_circle
                 </span>
-                <p className="text-body-md font-body-md text-on-surface">{rule}</p>
+                <p className="text-body-md font-body-md text-on-surface whitespace-pre-line">{rule}</p>
               </li>
             ))}
           </ul>
