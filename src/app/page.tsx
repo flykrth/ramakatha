@@ -2,6 +2,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { getCurrentStudent } from '@/services/auth'
 import Link from 'next/link'
+import PostersCarousel from '@/components/home/PostersCarousel'
 
 export const revalidate = 0
 
@@ -151,6 +152,9 @@ export default async function Home() {
             </div>
           </div>
         </section>
+
+        {/* Event Posters Gallery */}
+        <PostersCarousel />
       </main>
 
       <Footer />
