@@ -26,9 +26,15 @@ export default async function Home() {
             Ramakatha 2026
           </h1>
 
-          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-10">
+          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-8">
             Celebrate the timeless wisdom of Ramayana through creativity & character.
           </p>
+
+          <div className="bg-surface-container/50 border border-outline-variant/60 rounded-xl px-6 py-4 mb-10 max-w-xl shadow-sm text-center">
+            <p className="text-body-md text-on-surface-variant leading-relaxed">
+              📅 <span className="font-semibold text-on-surface">Important Dates:</span> Last date of registration is <span className="text-primary font-bold">16 August, 2026</span>. Last date of submission is <span className="text-primary font-bold text-[#8b5a2b]">31 August, 2026</span>.
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
             <Link
@@ -131,6 +137,7 @@ export default async function Home() {
             <div className="glass-card border border-[#6a1b9a]/30 rounded-2xl p-6 hover:-translate-y-2 hover:shadow-level-3 transition-all duration-300 bg-[#6a1b9a]/[0.02] hover:bg-[#6a1b9a]/[0.05] group">
               <div className="mb-6">
                 <h3 className="text-title-lg font-bold text-[#6a1b9a]">School level</h3>
+                <p className="text-label-sm text-[#6a1b9a] font-semibold mt-1">Group events for classes IX to XII</p>
               </div>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start gap-3">
