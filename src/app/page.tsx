@@ -22,9 +22,11 @@ export default async function Home() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl text-primary mb-6 max-w-4xl font-hindi tracking-wider">
-            Ramakatha 2026
-          </h1>
+          <img
+            src="/logo.png"
+            alt="RAMA Katha 2026"
+            className="w-72 md:w-[420px] h-auto object-contain mb-8 mx-auto hover:scale-102 transition-transform duration-300"
+          />
 
           <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-8">
             Celebrate the timeless wisdom of Ramayana through creativity & character.

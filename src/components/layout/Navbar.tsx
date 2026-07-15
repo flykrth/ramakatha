@@ -56,14 +56,13 @@ export default function Navbar({ student }: NavbarProps) {
           {/* Brand */}
           <Link
             href="/"
-            className="flex items-center gap-3 text-title-lg font-title-lg font-bold text-primary hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
             <img
               src="/logo.png"
-              alt="Ramakatha Logo"
-              className="w-10 h-10 object-contain shrink-0"
+              alt="RAMA Katha 2026 Logo"
+              className="h-14 w-auto object-contain shrink-0"
             />
-            <span className="font-hindi tracking-wider text-2xl">Ramakatha 2026</span>
           </Link>
 
           {/* Desktop Navigation */}
