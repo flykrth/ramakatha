@@ -53,7 +53,7 @@ export default async function Home() {
               className="bg-cover bg-center w-full h-full absolute inset-0"
               style={{
                 backgroundImage:
-                  "url('https://www.atmatattva.com/wp-content/uploads/2026/01/ramayana-01.jpg')",
+                  "url('/hero-bg.jpg')",
               }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-8">
