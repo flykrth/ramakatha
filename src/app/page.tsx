@@ -50,7 +50,7 @@ export default async function Home() {
           </div>
 
           {/* Decorative visual element */}
-          <div className="w-full mt-xl rounded-2xl overflow-hidden shadow-level-1 border border-outline-variant relative h-[400px] card-shine hover:scale-[1.01] hover:shadow-level-2 transition-all duration-500 group cursor-pointer">
+          <div className="w-full mt-xl rounded-2xl overflow-hidden shadow-level-1 border border-outline-variant relative h-[400px] md:h-[500px] card-shine hover:scale-[1.01] hover:shadow-level-2 transition-all duration-500 group cursor-pointer">
             <div
               className="bg-cover bg-center w-full h-full absolute inset-0"
               style={{
@@ -58,11 +58,6 @@ export default async function Home() {
                   "url('/hero-bg.jpg')",
               }}
             ></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-8">
-              <p className="text-white text-title-lg font-title-lg max-w-2xl text-left font-serif leading-relaxed">
-                Ramayana is not just a story. It is a journey of values, courage and devotion that transcends time.
-              </p>
-            </div>
           </div>
         </section>
 
