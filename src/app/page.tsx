@@ -32,7 +32,9 @@ export default async function Home() {
 
           <div className="bg-surface-container/50 border border-outline-variant/60 rounded-xl px-6 py-4 mb-10 max-w-xl shadow-sm text-center">
             <p className="text-body-md text-on-surface-variant leading-relaxed">
-              📅 <span className="font-semibold text-on-surface">Important Dates:</span> Last date of registration is <span className="text-primary font-bold">16 August, 2026</span>. Last date of submission is <span className="text-primary font-bold text-[#8b5a2b]">31 August, 2026</span>.
+              <span className="font-semibold text-on-surface block mb-1">Important dates:</span>
+              Last date of registration is <span className="text-primary font-bold">16 August, 2026</span>.<br />
+              Last date of submission is <span className="text-primary font-bold text-[#8b5a2b]">31 August, 2026</span>.
             </p>
           </div>
 
