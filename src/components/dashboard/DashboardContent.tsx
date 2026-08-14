@@ -178,14 +178,6 @@ export default function DashboardContent({
                     <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>chat</span>
                     Join WhatsApp
                   </a>
-                  <button
-                    onClick={() =>
-                      handleOpenRemoveModal({ id: reg.competitions.id, title: reg.competitions.title })
-                    }
-                    className="px-4 py-2 border border-error text-error text-label-md font-label-md rounded-lg hover:bg-error-container/10 transition-colors cursor-pointer text-center grow md:grow-0"
-                  >
-                    Remove registration
-                  </button>
                 </div>
               </div>
             ))}

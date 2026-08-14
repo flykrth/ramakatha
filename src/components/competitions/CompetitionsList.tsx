@@ -134,33 +134,16 @@ export default function CompetitionsList({
                         >
                           Already registered
                         </button>
-                      ) : comp.status === 'closed' ? (
-                        <button
-                          disabled
-                          className="w-full border border-outline text-on-surface-variant/50 px-4 py-2.5 rounded-xl font-label-md text-label-md bg-surface-container cursor-not-allowed text-center"
-                        >
-                          Registrations closed
-                        </button>
                       ) : (
-                        <>
-                          <Link
-                            href={`/competitions/${comp.id}`}
-                            className="bg-primary-container text-white px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-primary transition-colors flex items-center justify-center gap-2 cursor-pointer grow text-center font-bold"
-                          >
-                            Register now
-                          </Link>
-                          {isFeatured && (
-                            <Link
-                              href={`/competitions/${comp.id}`}
-                              className="border border-outline text-on-surface px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center justify-center gap-2 cursor-pointer text-center"
-                            >
-                              View guidelines
-                              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
-                                arrow_forward
-                              </span>
-                            </Link>
-                          )}
-                        </>
+                        <Link
+                          href={`/competitions/${comp.id}`}
+                          className="bg-primary-container text-white px-6 py-2.5 rounded-xl font-label-md text-label-md hover:bg-primary transition-colors flex items-center justify-center gap-2 cursor-pointer grow text-center font-bold"
+                        >
+                          View guidelines
+                          <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>
+                            arrow_forward
+                          </span>
+                        </Link>
                       )}
                     </div>
                   </div>

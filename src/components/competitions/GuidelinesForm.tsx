@@ -146,7 +146,7 @@ export default function GuidelinesForm({
   // Registration block logic: Block if already registered OR if class-category limit reached
   const isClassCategoryEvent = !competition.is_school_wise
   const isLimitReached = isClassCategoryEvent && hasRegisteredClassEvent
-  const isRegistrationBlocked = isAlreadyRegistered || isLimitReached
+  const isRegistrationBlocked = true // Force closed globally
 
   const handleRegister = async () => {
     if (!checkRules || !checkEligibility || isRegistrationBlocked) return
@@ -232,13 +232,11 @@ export default function GuidelinesForm({
   }
 
   // Set the button label dynamically
-  let buttonLabel = 'Register for event'
+  let buttonLabel = 'Registrations closed'
   if (isPending) {
     buttonLabel = 'Processing...'
   } else if (isAlreadyRegistered) {
     buttonLabel = 'Already registered'
-  } else if (isLimitReached) {
-    buttonLabel = 'Event registration limit reached'
   }
 
   return (
@@ -308,96 +306,56 @@ export default function GuidelinesForm({
           <div className="border-b border-outline-variant pb-md">
             <h3 className="text-title-lg font-title-lg text-on-surface mb-2 font-bold">Registration status</h3>
             <div className="flex items-center gap-2">
-              {isRegistrationBlocked ? (
+              {isAlreadyRegistered ? (
                 <>
                   <span className="relative flex h-3 w-3">
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#4CAF50]"></span>
                   </span>
-                  <span className="text-label-md font-label-md text-error font-semibold">
-                    {isAlreadyRegistered ? 'Already registered' : 'Registration blocked'}
+                  <span className="text-label-md font-label-md text-[#4CAF50] font-semibold">
+                    Already registered
                   </span>
                 </>
               ) : (
                 <>
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-outline"></span>
                   </span>
-                  <span className="text-label-md font-label-md text-secondary-container font-semibold">
-                    Registrations open
+                  <span className="text-label-md font-label-md text-on-surface-variant font-semibold">
+                    Registrations closed
                   </span>
                 </>
               )}
             </div>
-            <p className="text-label-sm font-label-sm text-on-surface-variant mt-2">Closes: August 16, 2026</p>
+            <p className="text-label-sm text-on-surface-variant mt-2">Closes: August 16, 2026</p>
           </div>
 
           {/* Validation Feedback Warning Banners */}
-          {isAlreadyRegistered && (
+          {isAlreadyRegistered ? (
             <div className="p-4 bg-secondary-container/10 border border-secondary-container/30 text-secondary-fixed-dim rounded-lg text-body-md flex gap-2">
               <span className="material-symbols-outlined text-secondary" style={{ fontSize: '20px' }}>info</span>
               <p className="text-label-sm text-on-surface-variant">
-                You are already registered for this competition. You can manage your participation on your <Link href="/dashboard" className="text-primary underline font-semibold">Dashboard</Link>.
+                You are registered for this competition. You can manage your participation on your <Link href="/dashboard" className="text-primary underline font-semibold">Dashboard</Link>.
+              </p>
+            </div>
+          ) : (
+            <div className="p-4 bg-surface-container-high/40 border border-outline-variant text-on-surface-variant rounded-lg text-body-md flex gap-2">
+              <span className="material-symbols-outlined text-on-surface-variant" style={{ fontSize: '20px' }}>info</span>
+              <p className="text-label-sm text-on-surface-variant font-medium">
+                Registrations for Ramakatha 2026 are now closed. No new bookings can be created.
               </p>
             </div>
           )}
 
-          {isLimitReached && (
-            <div className="p-4 bg-error-container/20 border border-error-container text-error rounded-lg text-body-md flex gap-2">
-              <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>warning</span>
-              <p className="text-label-sm text-on-surface-variant">
-                You can only register for a single event in your class category. To choose this event, please cancel your other class registration on the <Link href="/dashboard" className="text-primary underline font-semibold">Dashboard</Link> first.
-              </p>
+          {!isAlreadyRegistered && (
+            <div className="text-body-sm text-on-surface-variant/80 italic text-center py-2">
+              Cancellations and registration adjustments are also closed.
             </div>
           )}
 
-          <div className="flex flex-col gap-3">
-            <h4 className="text-label-md font-label-md text-on-surface font-semibold">Pre-registration checklist:</h4>
-            
-            <label className="flex items-start gap-3 cursor-pointer group">
-              <div className="relative flex items-start pt-1">
-                <input
-                  type="checkbox"
-                  checked={checkRules}
-                  onChange={(e) => setCheckRules(e.target.checked)}
-                  className="peer sr-only"
-                  disabled={isPending || isRegistrationBlocked}
-                />
-                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 transition-colors flex items-center justify-center group-hover:border-primary">
-                  <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
-                    check
-                  </span>
-                </div>
-              </div>
-              <span className="text-body-md font-body-md text-on-surface select-none">
-                I have read and understood the rules and guidelines.
-              </span>
-            </label>
-
-            <label className="flex items-start gap-3 cursor-pointer group">
-              <div className="relative flex items-start pt-1">
-                <input
-                  type="checkbox"
-                  checked={checkEligibility}
-                  onChange={(e) => setCheckEligibility(e.target.checked)}
-                  className="peer sr-only"
-                  disabled={isPending || isRegistrationBlocked}
-                />
-                <div className="h-5 w-5 rounded border border-outline-variant bg-surface peer-checked:bg-primary peer-checked:border-primary peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 transition-colors flex items-center justify-center group-hover:border-primary">
-                  <span className="material-symbols-outlined text-on-primary opacity-0 peer-checked:opacity-100 transition-opacity" style={{ fontSize: '16px' }}>
-                    check
-                  </span>
-                </div>
-              </div>
-              <span className="text-body-md font-body-md text-on-surface select-none">
-                I confirm I meet the age and eligibility requirements for this division.
-              </span>
-            </label>
-          </div>
           <div className="pt-md mt-auto">
             <button
               onClick={handleRegister}
-              disabled={!checkRules || !checkEligibility || isPending || isRegistrationBlocked}
+              disabled={true}
               className="w-full bg-primary-container text-on-primary py-3 px-4 rounded-xl text-label-md font-label-md font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-on-primary-fixed-variant flex items-center justify-center gap-2 cursor-pointer"
             >
               {buttonLabel}

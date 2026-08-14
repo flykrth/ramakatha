@@ -46,7 +46,7 @@ export default async function Home() {
               href={student ? '/dashboard' : '/register'}
               className="relative overflow-hidden bg-gradient-to-r from-primary via-[#b58a3d] to-primary hover:from-[#b58a3d] hover:to-primary text-white font-bold text-label-md font-label-md py-3.5 px-9 rounded-[12px] shadow-level-1 hover:shadow-level-3 hover:scale-[1.04] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto animate-pulse-glow animate-shine-slide border border-[#b58a3d]/30"
             >
-              {student ? 'Go to dashboard' : 'Register now'}
+              {student ? 'Go to dashboard' : 'Student login'}
             </Link>
           </div>
 
