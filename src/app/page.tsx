@@ -16,10 +16,10 @@ export default async function Home() {
       <main className="relative pt-24 pb-xl flex-grow overflow-hidden">
         {/* Hero Section */}
         <section className="relative px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-xl md:py-[120px] flex flex-col items-center text-center z-10">
-          <div className="inline-flex items-center gap-2 bg-secondary-container/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-secondary-container material-symbols-outlined text-sm">auto_awesome</span>
-            <span className="text-secondary-container text-label-sm font-label-sm uppercase tracking-wider">
-              Registration open
+          <div className="inline-flex items-center gap-2 bg-outline-variant/30 px-4 py-1.5 rounded-full mb-6 text-on-surface-variant">
+            <span className="material-symbols-outlined text-sm">lock</span>
+            <span className="text-label-sm font-label-sm uppercase tracking-wider font-semibold">
+              Registration closed
             </span>
           </div>
 
