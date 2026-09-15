@@ -196,7 +196,7 @@ export default function GuidelinesForm({
               Please join our official WhatsApp group for further announcements, updates, and coordinator contacts:
             </p>
             <a
-              href="https://chat.whatsapp.com/JY7loDZQ0NIG4lYgTmaQSx?s=cl&p=a&ilr=4"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 py-2 px-4 bg-[#25D366] text-white rounded-lg font-bold text-center hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"

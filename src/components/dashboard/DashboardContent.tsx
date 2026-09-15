@@ -170,7 +170,7 @@ export default function DashboardContent({
                     View guidelines
                   </Link>
                   <a
-                    href="https://chat.whatsapp.com/JY7loDZQ0NIG4lYgTmaQSx?s=cl&p=a&ilr=4"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 border border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10 text-label-md font-label-md rounded-lg transition-colors text-center grow md:grow-0 flex items-center justify-center gap-1.5 font-bold"

@@ -6,7 +6,7 @@ import { logger } from '@/lib/logger'
 import { createHmac } from 'crypto'
 
 const getPassword = (email: string): string => {
-  const salt = process.env.SUPABASE_PASSWORD_SALT || 'default_fallback_salt_39f7g1a'
+  const salt = process.env.SUPABASE_PASSWORD_SALT || ''
   return createHmac('sha256', salt).update(email.toLowerCase().trim()).digest('hex')
 }
 
